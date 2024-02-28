@@ -9,10 +9,11 @@ import ContactMe from "./sections/4-ContactMe/ContactMe";
 import i18n from "./translation";
 import { Section } from "./utils";
 import CleanUp from "./sections/3-Portfolio/1-CleanUp/CleanUp";
+import Expensify from "./sections/3-Portfolio/2-Expensify/Expensify";
 
 function App() {
     const containerRef = useRef<HTMLDivElement>(null);
-    useScrollSnap({ ref: containerRef, duration: 100 });
+    // useScrollSnap({ ref: containerRef, duration: 100 });
     const homeRef = useRef<HTMLDivElement>(null);
     const aboutMeRef = useRef<HTMLDivElement>(null);
     const portfolioRef = useRef<HTMLDivElement>(null);
@@ -39,6 +40,7 @@ function App() {
                 <Home ref={homeRef} />
                 <AboutMe ref={aboutMeRef} />
                 <CleanUp ref={portfolioRef} />
+                <Expensify/>
                 <ContactMe ref={contactMeRef} />
             </div>
         </I18nextProvider>
