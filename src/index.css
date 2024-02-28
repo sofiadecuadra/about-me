@@ -1,68 +1,112 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --color-grey: #282929;
+    --color-primary: #ff54d9;
+    --color-primary-light: #ff98e8;
+    --color-primary-lightest: #ffd3f6;
+    --color-white: rgba(255, 255, 255, 0.93);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    /* CleanUp */
+    --color-cleanup: #1556b1;
+    --color-cleanup-light: #75a3e4;
+    --color-cleanup-background: #f6f9fe;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Expensify */
+    --color-expensify: #a83d9d;
+    --color-expensify-light: rgb(241, 151, 232);
+    --color-expensify-background: #fef8fc;
+
+    font-family: "MADEOuterSans", sans-serif;
+    line-height: 1.5;
+
+    color-scheme: light dark;
+    color: var(--color-white);
+    background-color: var(--color-grey);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+#root {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    border-radius: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-grey);
+    border-width: 2px;
+    border-color: var(--color-primary);
+    padding: 10px 32px;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
 }
+
 button:hover {
-  border-color: #646cff;
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:active {
+    background-color: var(--color-grey);
+    color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
 }

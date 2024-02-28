@@ -1,0 +1,11 @@
+{
+    "Home": {
+        "Name": "Sofía Decuadra"
+    },
+    "Sections": {
+        "Home": "Inicio",
+        "About": "Sobre mí",
+        "Portfolio": "Portfolio",
+        "ContactMe": "Contacto"
+    }
+}
