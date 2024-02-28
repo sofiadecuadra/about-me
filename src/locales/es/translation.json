@@ -1,11 +1,75 @@
 {
-    "Home": {
-        "Name": "Sofía Decuadra"
-    },
     "Sections": {
         "Home": "Inicio",
-        "About": "Sobre mí",
+        "AboutMe": "Sobre mí",
         "Portfolio": "Portfolio",
         "ContactMe": "Contacto"
+    },
+    "SocialMedia": {
+        "LinkedIn": "LinkedIn",
+        "GitHub": "GitHub",
+        "Email": "Correo"
+    },
+    "Home": {
+        "Name": "Sofía",
+        "Surname": "Decuadra",
+        "Greetings": "Hola! 👋 soy",
+        "Career": "Licenciada en Ingeniería de Software",
+        "Description": "Estudiante de Ingeniería de Software en Uruguay 🇺🇾",
+        "HireMe": "Contrátame"
+    },
+    "AboutMe": {
+        "Title": "Sobre mí",
+        "Description": {
+            "First": "Soy una estudiante de ingeniería de software en busca de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque domino ambos.",
+            "Second": "En cuanto a mi experiencia laboral, pasé un año trabajando para la empresa 'CleanUp' como parte de mi proyecto de fin de carrera. Los detalles se pueden encontrar en mi portafolio.",
+            "Third": "Tengo muchas ganas de aprender y utilizar lo aprendido en una empresa. Me considero adaptable, responsable y amigable."
+        }
+    },
+    "CleanUp": {
+        "Title": "CleanUp",
+        "Description": "This project started as part of my final degree project. Within the project, I took on various roles, such as mobile developer (React native), web developer (React) and UX/UI designer.",
+        "Problem": {
+            "Title": "The problem",
+            "Description": {
+                "First": "Frequent training due to high turnover of cleaning staff.",
+                "Second": "Different ways of cleaning...",
+                "Third": "Accidents occur which impact on hygiene quality and can take a long time to be reported and resolved.",
+                "Fourth": "Difficulties in keeping a record of what has been cleaned.",
+                "Fifth": "Difficulties in managing cleaning teams."
+            }
+        },
+        "Solution": {
+            "Title": "The solution",
+            "Description": "The solution was to create a web application for managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
+        },
+        "Procedures": {
+            "Title": "Procedures",
+            "Description": "Managers can configure how spaces should be cleaned. The QR codes (placed in the building) can then be scanned by the cleaners to read the cleaning procedure for the space they are going to clean."
+        },
+        "Alerts": {
+            "Title": "Alerts",
+            "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
+        },
+        "Calendar": {
+            "Title": "Calendar",
+            "Description": "Managers can create a schedule of tasks and assign these to cleaners. Cleaners from their mobile application can access the tasks they have for the day."
+        }
+    },
+    "Expensify": {
+        "Title": "Expensify",
+        "Description": "Web and mobile application for expense management in a family created as an academic project .",
+        "Categories": {
+            "Title": "Categories",
+            "Description": "Categories can be created to differentiate expenses according to them. This division is then used to extract metrics."
+        },
+        "Expenses": {
+            "Title": "Expenses",
+            "Description": "Expenses can be recorded and shared with family members. These include a name, date, category, and a photo of the invoice if desired."
+        }
+    },
+    "ContactMe": {
+        "Title": "Déjame un mensaje",
+        "Description": "Si estás interesado en mi perfil o tienes alguna pregunta, ¡no dudes en contactarme!"
     }
 }

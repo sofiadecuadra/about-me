@@ -1,21 +1,25 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Section, sections } from "../../utils";
 import NavOption from "./NavOption/NavOption";
 import style from "./Navbar.module.css";
 
-const OPTIONS = ["Home", "About", "Portfolio", "ContactMe"];
+interface NavbarProps {
+    scrollToSection: (section: Section) => void;
+}
 
-const Navbar = () => {
-    const [currentOption, setCurrentOption] = useState(OPTIONS[0]);
+const Navbar: FC<NavbarProps> = ({ scrollToSection }) => {
+    const [currentOption, setCurrentOption] = useState(sections[0]);
     const { t } = useTranslation();
 
     return (
         <div className={style["container"]}>
-            {OPTIONS.map((item) => (
+            {sections.map((item) => (
                 <NavOption
                     key={item}
                     text={t(`Sections.${item}`)}
                     onClick={() => {
+                        scrollToSection(item);
                         setCurrentOption(item);
                     }}
                     selected={item === currentOption}
