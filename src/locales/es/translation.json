@@ -14,14 +14,14 @@
         "Name": "Sofía",
         "Surname": "Decuadra",
         "Greetings": "Hola! 👋 soy",
-        "Career": "Licenciada en Ingeniería de Software 👩‍💻",
-        "Description": "Estudiante de Ingeniería de Software en Uruguay 🇺🇾",
+        "Career": "Ingeniera en Sistemas 👩‍💻",
+        "Description": "Uruguay 🇺🇾",
         "HireMe": "Contrátame"
     },
     "AboutMe": {
         "Title": "Sobre mí",
         "Description": {
-            "First": "Soy una estudiante de ingeniería de software en busca de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque domino ambos.",
+            "First": "Me acabo de graduar como Ingeniera en Sistemas y estoy en la búsqueda de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque domino ambos.",
             "Second": "En cuanto a mi experiencia laboral, pasé un año trabajando para la empresa 'CleanUp' como parte de mi proyecto de fin de carrera. Los detalles se pueden encontrar en mi portafolio.",
             "Third": "Tengo muchas ganas de aprender y utilizar lo aprendido en una empresa. Me considero adaptable, responsable y amigable."
         }

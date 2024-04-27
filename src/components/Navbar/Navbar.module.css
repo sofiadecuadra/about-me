@@ -3,8 +3,20 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
-    background-color: rgb(31, 30, 30);
     position: sticky;
     position: -webkit-sticky; /* For Safari */
     top: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.background-default {
+    background-color: var(--color-grey);
+}
+
+.background-cleanup {
+    background-color: var(--color-cleanup-background);
+}
+
+.background-expensify {
+    background-color: var(--color-expensify-background);
 }

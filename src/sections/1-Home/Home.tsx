@@ -23,7 +23,7 @@ const Home = forwardRef<HTMLDivElement>((_, ref) => {
         </h1>
         <h6>{t("Home.Career")}</h6>
         <p>{t("Home.Description")}</p>
-        <ProgressBar />
+        {/* <ProgressBar /> */}
         <button className={style["button"]}>{t("Home.HireMe")}</button>
       </div>
       <img src="./src/assets/images/memoji.png"></img>

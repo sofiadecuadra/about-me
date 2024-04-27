@@ -14,15 +14,15 @@
         "Name": "Sofía",
         "Surname": "Decuadra",
         "Greetings": "Hi there 👋 I’m",
-        "Career": "Bachelor in software engineering 👩‍💻",
-        "Description": "Software Engineering student based in Uruguay 🇺🇾",
+        "Career": "Software engineer 👩‍💻",
+        "Description": "Based in Uruguay 🇺🇾",
         "HireMe": "Hire me"
     },
     "AboutMe": {
         "Title": "About me",
         "Description": {
-            "First": "I'm a hardworking  software engineering student looking for job opportunities. I recently discovered that I have a strong interest in frontend development, even more than backend, although I am proficient in both.",
-            "Second": "As for my work experience, I spent 1 year working for the company 'CleanUp' as part of my final project. Details can be found in my portfolio.",
+            "First": "I'm a hardworking, just graduated software engineer looking for job opportunities. I recently discovered that I have a strong interest in frontend development, even more than backend, although I am proficient in both.",
+            "Second": "As for my work experience, I spent 1 year working for the company 'CleanUp,' where my team and I built an application for cleaning management. Further details can be found in my portfolio.",
             "Third": "I'm eager to learn and ready to use what I've learned in a company. I consider myself to be adaptable, responsible and friendly."
         }
     },
@@ -49,11 +49,11 @@
         },
         "Alerts": {
             "Title": "Alerts",
-            "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
+            "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the QR code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
         },
         "Calendar": {
             "Title": "Calendar",
-            "Description": "Managers can create a schedule of tasks and assign these to cleaners. Cleaners from their mobile application can access the tasks they have for the day."
+            "Description": "Managers can create a schedule of tasks and assign them to cleaners. Cleaners can access their assigned tasks for the day and mark them as completed, thus maintaining a record of the cleaned areas."
         }
     },
     "Expensify": {

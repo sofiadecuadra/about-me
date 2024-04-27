@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const HEADER_HEIGHT = 68;
 
-export type Section = "Home" | "AboutMe" | "Portfolio" | "ContactMe";
+export type Section = "Home" | "AboutMe" | "Portfolio" | "Expensify" | "ContactMe";
 
 export const sections: Section[] = ["Home", "AboutMe", "Portfolio", "ContactMe"];
 

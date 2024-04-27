@@ -50,7 +50,7 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           variant="cleanup"
           image="./src/assets/images/cleanup/calendar.png"
           imagePosition="right"
-          imageWidth="700p"
+          imageWidth="700px"
           maxTextWidth="320px"
         />
       </div>

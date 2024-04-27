@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useRef } from "react";
+import { RefObject, useCallback, useEffect, useRef, useState } from "react";
 import { I18nextProvider } from "react-i18next";
 // import ReactSnapScroll from "react-snap-scroll";
 import useScrollSnap from "react-use-scroll-snap";
@@ -17,13 +17,46 @@ function App() {
     const homeRef = useRef<HTMLDivElement>(null);
     const aboutMeRef = useRef<HTMLDivElement>(null);
     const portfolioRef = useRef<HTMLDivElement>(null);
+    const expensifyRef = useRef<HTMLDivElement>(null);
     const contactMeRef = useRef<HTMLDivElement>(null);
     const refs: Record<Section, RefObject<HTMLDivElement>> = {
         Home: homeRef,
         AboutMe: aboutMeRef,
         Portfolio: portfolioRef,
+        Expensify: expensifyRef,
         ContactMe: contactMeRef,
     };
+    const [variant, setVariant] = useState<"cleanup" | "expensify" | undefined>();
+
+    const handleScroll = () => {
+        const sections = Object.keys(refs) as Array<string>;
+        const scrollPosition = window.scrollY;
+
+        const visibleSection = sections.find(section => {
+            const ref = refs[section as keyof typeof refs];
+            if (ref && ref.current) {
+                const top = ref.current.offsetTop;
+                const bottom = top + ref.current.offsetHeight;
+                return scrollPosition >= top && scrollPosition < bottom;
+            }
+            return false;
+        });
+        
+        if (visibleSection === "Expensify") {
+            setVariant("expensify");
+        } else if (visibleSection === "Portfolio") {
+            setVariant("cleanup");
+        } else {
+            setVariant(undefined);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []); 
 
     const scrollToSection = useCallback((section: Section) => {
         const ref = refs[section];
@@ -35,12 +68,12 @@ function App() {
 
     return (
         <I18nextProvider i18n={i18n}>
-            <Navbar scrollToSection={scrollToSection} />
+            <Navbar scrollToSection={scrollToSection} variant={variant}/>
             <div ref={containerRef}>
                 <Home ref={homeRef} />
                 <AboutMe ref={aboutMeRef} />
-                <CleanUp ref={portfolioRef} />
-                <Expensify/>
+                <CleanUp ref={portfolioRef}/>
+                <Expensify ref={expensifyRef}/>
                 <ContactMe ref={contactMeRef} />
             </div>
         </I18nextProvider>
