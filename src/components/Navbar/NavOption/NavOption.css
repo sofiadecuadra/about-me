@@ -6,6 +6,7 @@
     border-color: transparent;
     padding: 12px 32px;
     line-height: 24px;
+    transition: all 0.3s ease;
 }
 
 /* Default */

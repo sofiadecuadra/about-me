@@ -27,6 +27,7 @@ function App() {
         ContactMe: contactMeRef,
     };
     const [variant, setVariant] = useState<"cleanup" | "expensify" | undefined>();
+    const [currentSection, setCurrentSection] = useState<Section>("Home");
 
     const handleScroll = () => {
         const sections = Object.keys(refs) as Array<string>;
@@ -44,10 +45,13 @@ function App() {
         
         if (visibleSection === "Expensify") {
             setVariant("expensify");
+            setCurrentSection("Portfolio");
         } else if (visibleSection === "Portfolio") {
             setVariant("cleanup");
+            setCurrentSection("Portfolio");
         } else {
             setVariant(undefined);
+            setCurrentSection(visibleSection as Section);
         }
     }
 
@@ -68,7 +72,7 @@ function App() {
 
     return (
         <I18nextProvider i18n={i18n}>
-            <Navbar scrollToSection={scrollToSection} variant={variant}/>
+            <Navbar scrollToSection={scrollToSection} variant={variant} currentSection={currentSection}/>
             <div ref={containerRef}>
                 <Home ref={homeRef} />
                 <AboutMe ref={aboutMeRef} />

@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Section, sections } from "../../utils";
 import NavOption from "./NavOption/NavOption";
@@ -8,10 +8,16 @@ import classNames from "classnames";
 interface NavbarProps {
   scrollToSection: (section: Section) => void;
   variant?: "default" | "cleanup" | "expensify";
+  currentSection: Section;
 }
 
-const Navbar: FC<NavbarProps> = ({ scrollToSection, variant = "default"}) => {
-  const [currentOption, setCurrentOption] = useState(sections[0]);
+const Navbar: FC<NavbarProps> = ({ scrollToSection, variant = "default", currentSection}) => {
+  const [currentOption, setCurrentOption] = useState(currentSection);
+  useEffect(() => {
+    setCurrentOption(currentSection);
+  }
+  , [currentSection]);
+  
   const { t } = useTranslation();
 
   return (
