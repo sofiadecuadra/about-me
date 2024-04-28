@@ -53,6 +53,9 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           imageWidth="700px"
           maxTextWidth="320px"
         />
+        <button className={style["button"]}>
+        {t("CleanUp.WatchDemo")}
+        </button>
       </div>
     </div>
   );

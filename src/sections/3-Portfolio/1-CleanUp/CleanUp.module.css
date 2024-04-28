@@ -47,3 +47,20 @@
 .solution {
     align-self: center;
 }
+
+.button {
+    background-color: var(--color-cleanup);
+    color: var(--color-white);
+    border-color: var(--color-cleanup);
+}
+
+.button:hover {
+    background-color: var(--color-cleanup-light);
+    border-color: var(--color-cleanup-light);
+}
+
+.button:active {
+    background-color: var(--color-cleanup-background);
+    color: var(--color-cleanup-light);
+    border-color: var(--color-cleanup-light);
+}

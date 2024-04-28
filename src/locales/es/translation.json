@@ -55,7 +55,8 @@
         "Calendar": {
             "Title": "Calendar",
             "Description": "Managers can create a schedule of tasks and assign these to cleaners. Cleaners from their mobile application can access the tasks they have for the day."
-        }
+        },
+        "WatchDemo": "Ver demo"
     },
     "Expensify": {
         "Title": "Expensify",
@@ -76,7 +77,15 @@
         "Errors": {
             "Name": "Escribe tu nombre",
             "Email": "Escribe un correo válido",
-            "Message": "Escribe un mensaje"
+            "Message": "Escribe un mensaje",
+            "Unknown": "Algo salió mal, inténtalo de nuevo más tarde"
+        },
+        "Success": "Mensaje enviado con éxito",
+        "Sending": "Enviando...",
+        "FormPlaceholder": {
+            "Name": "Ej. Juan",
+            "Email": "mail@example.com",
+            "Message": "Ej. Me gustaría ponernos en contacto para hablar sobre..."
         }
     }
 }

@@ -220,6 +220,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@emailjs/browser@^4.3.3":
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-4.3.3.tgz#edf759fc68f1628d7192bed689b1bb0651890f57"
+  integrity sha512-ltpt2S/WVREIBXptxYAVYBvXb2O6yTUYiRUWF8OLikMxlmiGsIgKpgHppikNd4Df0uAav7jCsQKcOJ3TJFUx5g==
+
 "@esbuild/aix-ppc64@0.19.12":
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"
@@ -639,6 +644,13 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/node@^20.12.7":
+  version "20.12.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.7.tgz#04080362fa3dd6c5822061aa3124f5c152cff384"
+  integrity sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==
+  dependencies:
+    undici-types "~5.26.4"
+
 "@types/prop-types@*":
   version "15.7.11"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.11.tgz"
@@ -894,6 +906,11 @@ classnames@^2.5.1:
   version "2.5.1"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
+
+clsx@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -1675,6 +1692,13 @@ react-refresh@^0.14.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
+react-toastify@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.5.tgz#6b8f8386060c5c856239f3036d1e76874ce3bd1e"
+  integrity sha512-mNKt2jBXJg4O7pSdbNUfDdTsK9FIdikfsIE/yUCxbAEXl4HMyJaivrVFcn3Elvt5xvCQYhUZm+hqTIu1UXM3Pw==
+  dependencies:
+    clsx "^2.1.0"
+
 react-use-scroll-snap@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-use-scroll-snap/-/react-use-scroll-snap-1.0.0.tgz#548347fb7c8dd2af3a9bdbcea92a3d41c040bc3f"
@@ -1868,6 +1892,11 @@ typescript@^5.2.2:
   version "5.3.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.3.3.tgz"
   integrity sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==
+
+undici-types@~5.26.4:
+  version "5.26.5"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
+  integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
 update-browserslist-db@^1.0.13:
   version "1.0.13"

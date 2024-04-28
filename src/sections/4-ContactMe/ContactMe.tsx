@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { HEADER_HEIGHT, useWindowDimensions } from "../../utils";
 import style from "./ContactMe.module.css";
 import TextBox from "../../components/TextBox/TextBox";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
@@ -17,17 +19,6 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleLinkedInClick = () => {
-    window.open(
-      "https://www.linkedin.com/in/sofía-decuadra-noya-4a8842245",
-      "_blank"
-    );
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = "mailto:decuadrasofia@gmail.com";
-  };
 
   const validateForm = () => {
     let isValid = true;
@@ -59,11 +50,49 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
     return isValid;
   };
 
-  const handleFormSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+    const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
 
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("Service ID, template ID, or public key is undefined.");
+      return;
+    }
+
+    const form = document.getElementById("contact-form");
+
+    if (form instanceof HTMLFormElement) {
+      const toastId = toast.loading(t("ContactMe.Sending")); // Notificación de carga
+
+      emailjs.sendForm(serviceId, templateId, form, publicKey).then(
+        (_result) => {
+          toast.update(toastId, {
+            render: t("ContactMe.Success"),
+            type: "success",
+            isLoading: false,
+            autoClose: 5000,
+          });
+          form.reset();
+        },
+        (_error) => {
+          toast.update(toastId, {
+            render: t("ContactMe.Errors.Unknown"),
+            type: "error",
+            isLoading: false,
+            autoClose: 5000,
+          });
+        }
+      );
+    } else {
+      console.error("Form is not a HTMLFormElement or it's null");
+    }
+  };
+
+  const handleFormSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted successfully!");
+      sendEmail();
     }
   };
 
@@ -76,11 +105,16 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
       <div className={style["subContainer"]}>
         <h2>{t("ContactMe.Title")}</h2>
         <p className={style["text"]}>{t("ContactMe.Description")}</p>
-        <div className={style["form-container"]}>
+        <form
+          className={style["form-container"]}
+          id="contact-form"
+          onSubmit={handleFormSubmit}
+        >
           <div className={style["user-info"]}>
             <TextBox
               label="Name"
-              placeholder={t("E.g. Jean")}
+              name="from_name"
+              placeholder={t("ContactMe.FormPlaceholder.Name")}
               required
               setField={setName}
               error={nameError}
@@ -89,7 +123,8 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
             />
             <TextBox
               label="Email"
-              placeholder={t("mail@example.com")}
+              name="from_email"
+              placeholder={t("ContactMe.FormPlaceholder.Email")}
               required
               setField={setEmail}
               error={emailError}
@@ -99,6 +134,8 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
           </div>
           <TextBox
             label="Message"
+            name="message"
+            placeholder={t("ContactMe.FormPlaceholder.Message")}
             required
             height="112px"
             width="516px"
@@ -108,12 +145,10 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
             setError={setMessageError}
             inputRef={messageRef}
           />
-        </div>
-        <div className={style["button-container"]}>
-          <button onClick={handleFormSubmit} className={style["submit-button"]}>
+          <button type="submit" className={style["button"]}>
             {t("ContactMe.Submit")}
           </button>
-        </div>
+        </form>
       </div>
       <img src="./src/assets/images/me.png" alt="Me"></img>
     </div>

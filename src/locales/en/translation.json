@@ -60,7 +60,8 @@
         "Calendar": {
             "Title": "Calendar",
             "Description": "Managers can create a schedule of tasks and assign them to cleaners. Cleaners can access their assigned tasks for the day and mark them as completed, thus maintaining a record of the cleaned areas."
-        }
+        },
+        "WatchDemo": "Watch demo"
     },
     "Expensify": {
         "Title": "Expensify",
@@ -81,7 +82,15 @@
         "Errors": {
             "Name": "Enter your name",
             "Email": "Enter a valid email",
-            "Message": "Enter a message"
+            "Message": "Enter a message",
+            "Unknown": "Something went wrong, please try again later"
+        },
+        "Success": "Message sent successfully!",
+        "Sending": "Sending message...",
+        "FormPlaceholder": {
+            "Name": "E.g. Jean",
+            "Email": "mail@example.com",
+            "Message": "E.g. I would like to get in touch with you to talk about..."
         }
     }
 }

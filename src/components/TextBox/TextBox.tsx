@@ -12,6 +12,7 @@ interface InputProps {
   error?: string;
   setError: (error: string) => void;
   inputRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement>;
+  name?: string;
 }
 
 const TextBox = ({
@@ -25,6 +26,7 @@ const TextBox = ({
   error,
   setError,
   inputRef,
+  name,
 }: InputProps) => {
   return (
     <div className={style["container"]}>
@@ -43,6 +45,7 @@ const TextBox = ({
           className={style["text-box"]}
           placeholder={placeholder}
           style={{ height: height, width: width, paddingTop: "12px" }}
+          name={name}
         />
       ) : (
         <input
@@ -53,6 +56,7 @@ const TextBox = ({
             setField(event.target.value.trim());
             setError("");
           }}
+          name={name}
         />
       )}
     </div>

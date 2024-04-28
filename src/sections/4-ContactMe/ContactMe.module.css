@@ -34,6 +34,7 @@
     flex-direction: row;
     width: fit-content;
     margin-top: 26px;
+    align-items: center;
 }
 
 .form-container {
