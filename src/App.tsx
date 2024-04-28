@@ -74,7 +74,7 @@ function App() {
         <I18nextProvider i18n={i18n}>
             <Navbar scrollToSection={scrollToSection} variant={variant} currentSection={currentSection}/>
             <div ref={containerRef}>
-                <Home ref={homeRef} />
+                <Home ref={homeRef} scrollToContactMe={() => scrollToSection("ContactMe")} />
                 <AboutMe ref={aboutMeRef} />
                 <CleanUp ref={portfolioRef}/>
                 <Expensify ref={expensifyRef}/>

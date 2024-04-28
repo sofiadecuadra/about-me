@@ -16,7 +16,8 @@
         "Greetings": "Hola! 👋 soy",
         "Career": "Ingeniera en Sistemas 👩‍💻",
         "Description": "Uruguay 🇺🇾",
-        "HireMe": "Contrátame"
+        "HireMe": "Contrátame",
+        "DownloadCV": "Descargar CV"
     },
     "AboutMe": {
         "Title": "Sobre mí",
@@ -70,6 +71,12 @@
     },
     "ContactMe": {
         "Title": "Déjame un mensaje",
-        "Description": "Si estás interesado en mi perfil o tienes alguna pregunta, ¡no dudes en contactarme!"
+        "Description": "Si estás interesado en mi perfil o tienes alguna pregunta, ¡no dudes en contactarme!",
+        "Submit": "Enviar mensaje",
+        "Errors": {
+            "Name": "Escribe tu nombre",
+            "Email": "Escribe un correo válido",
+            "Message": "Escribe un mensaje"
+        }
     }
 }

@@ -16,7 +16,8 @@
         "Greetings": "Hi there 👋 I’m",
         "Career": "Software engineer 👩‍💻",
         "Description": "Based in Uruguay 🇺🇾",
-        "HireMe": "Hire me"
+        "HireMe": "Hire me",
+        "DownloadCV": "Download CV"
     },
     "AboutMe": {
         "Title": "About me",
@@ -24,6 +25,11 @@
             "First": "I'm a hardworking, just graduated software engineer looking for job opportunities. I recently discovered that I have a strong interest in frontend development, even more than backend, although I am proficient in both.",
             "Second": "As for my work experience, I spent 1 year working for the company 'CleanUp,' where my team and I built an application for cleaning management. Further details can be found in my portfolio.",
             "Third": "I'm eager to learn and ready to use what I've learned in a company. I consider myself to be adaptable, responsible and friendly."
+        },
+        "Languages": {
+            "Title": "Languages",
+            "English": "English: Advanced (Cambridge Certificate Level C1 - 2018)",
+            "Spanish": "Spanish: Native"
         }
     },
     "CleanUp": {
@@ -70,6 +76,12 @@
     },
     "ContactMe": {
         "Title": "Get in touch",
-        "Description": "If you are interested in my profile or have any questions, please do not hesitate to contact me!"
+        "Description": "If you are interested in my profile or have any questions, please do not hesitate to contact me!",
+        "Submit": "Send message",
+        "Errors": {
+            "Name": "Enter your name",
+            "Email": "Enter a valid email",
+            "Message": "Enter a message"
+        }
     }
 }

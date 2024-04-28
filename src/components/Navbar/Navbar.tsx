@@ -11,17 +11,22 @@ interface NavbarProps {
   currentSection: Section;
 }
 
-const Navbar: FC<NavbarProps> = ({ scrollToSection, variant = "default", currentSection}) => {
+const Navbar: FC<NavbarProps> = ({
+  scrollToSection,
+  variant = "default",
+  currentSection,
+}) => {
   const [currentOption, setCurrentOption] = useState(currentSection);
   useEffect(() => {
     setCurrentOption(currentSection);
-  }
-  , [currentSection]);
-  
+  }, [currentSection]);
+
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(style['container'], style[`background-${variant}`])}>
+    <div
+      className={classNames(style["container"], style[`background-${variant}`])}
+    >
       {sections.map((item) => (
         <NavOption
           key={item}

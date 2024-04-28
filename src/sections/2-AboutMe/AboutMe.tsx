@@ -27,7 +27,10 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
           {t("AboutMe.Description.Third")}
         </p>
         <Carousel />
+        <button className={style["button"]}>{t("Home.DownloadCV")}</button>
+
       </div>
+      
     </div>
   );
 });

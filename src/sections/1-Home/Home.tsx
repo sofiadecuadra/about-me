@@ -1,10 +1,14 @@
-import { forwardRef } from "react";
+// Home.tsx
+import { forwardRef, Ref } from "react";
 import { useTranslation } from "react-i18next";
-import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { HEADER_HEIGHT, useWindowDimensions } from "../../utils";
 import style from "./Home.module.css";
 
-const Home = forwardRef<HTMLDivElement>((_, ref) => {
+interface HomeProps {
+  scrollToContactMe: () => void;
+}
+
+const Home = forwardRef<HTMLDivElement, HomeProps>(({ scrollToContactMe }, ref) => {
   const { t } = useTranslation();
   const { height } = useWindowDimensions();
 
@@ -24,9 +28,9 @@ const Home = forwardRef<HTMLDivElement>((_, ref) => {
         <h6>{t("Home.Career")}</h6>
         <p>{t("Home.Description")}</p>
         {/* <ProgressBar /> */}
-        <button className={style["button"]}>{t("Home.HireMe")}</button>
+          <button className={style["button"]} onClick={scrollToContactMe}>{t("Home.HireMe")}</button>
       </div>
-      <img src="./src/assets/images/memoji.png"></img>
+      <img src="./src/assets/images/memoji.png" alt="Memoji" />
     </div>
   );
 });
