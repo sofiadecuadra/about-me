@@ -4,6 +4,7 @@ import { Section, sections } from "../../utils";
 import NavOption from "./NavOption/NavOption";
 import style from "./Navbar.module.css";
 import classNames from "classnames";
+import { MenuIcon } from "../../assets/icons";
 
 interface NavbarProps {
   scrollToSection: (section: Section) => void;
@@ -22,23 +23,34 @@ const Navbar: FC<NavbarProps> = ({
   }, [currentSection]);
 
   const { t } = useTranslation();
+  const [displayMenuOptions, setDisplayMenuOptions] = useState(false);
 
   return (
     <div
       className={classNames(style["container"], style[`background-${variant}`])}
+      onClick={() => setDisplayMenuOptions(!displayMenuOptions)}
     >
-      {sections.map((item) => (
-        <NavOption
-          key={item}
-          text={t(`Sections.${item}`)}
-          onClick={() => {
-            scrollToSection(item);
-            setCurrentOption(item);
-          }}
-          selected={item === currentOption}
-          variant={variant}
-        />
-      ))}
+      <MenuIcon
+        className={classNames(
+          style["menu-icon"],
+          style[`menu-icon-color-${variant}`]
+        )}
+      />
+      <div className={classNames(style["menu-options-container"], style[`background-mobile-${variant}`], { [style.active]: displayMenuOptions }, { [style.inactive]: !displayMenuOptions })}>
+        {sections.map((item) => (
+          <NavOption
+            key={item}
+            text={t(`Sections.${item}`)}
+            onClick={() => {
+              scrollToSection(item);
+              setCurrentOption(item);
+              setDisplayMenuOptions(false);
+            }}
+            selected={item === currentOption}
+            variant={variant}
+          />
+        ))}
+      </div>
     </div>
   );
 };

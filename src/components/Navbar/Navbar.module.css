@@ -1,22 +1,111 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0px;
-    position: sticky;
-    position: -webkit-sticky; /* For Safari */
-    top: 0;
-    transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px 0px;
+  position: sticky;
+  position: -webkit-sticky; /* For Safari */
+  top: 0;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .background-default {
-    background-color: var(--color-grey);
+  background-color: var(--color-grey);
 }
 
 .background-cleanup {
-    background-color: var(--color-cleanup-background);
+  background-color: var(--color-cleanup-background);
 }
 
 .background-expensify {
+  background-color: var(--color-expensify-background);
+}
+
+.menu-icon {
+  display: none;
+  width: 20px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.menu-icon-color-default {
+  fill: var(--color-white);
+}
+
+.menu-icon-color-cleanup {
+  fill: var(--color-grey);
+}
+
+.menu-icon-color-expensify {
+  fill: var(--color-grey);
+}
+
+.menu-options-container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+
+  .menu-options-container {
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    gap: 1rem;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-options-container.active {
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .menu-options-container:not(.active) {
+    animation: slideUp 0.3s ease forwards;
+  }
+
+  .background-mobile-default {
+    background-color: var(--color-grey);
+  }
+  
+  .background-mobile-cleanup {
+    background-color: var(--color-cleanup-background);
+  }
+  
+  .background-mobile-expensify {
     background-color: var(--color-expensify-background);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }

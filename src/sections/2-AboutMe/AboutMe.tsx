@@ -14,7 +14,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
       style={{ height: height - HEADER_HEIGHT }}
       ref={ref}
     >
-      <img src="./src/assets/images/me.png"></img>
+      <img src="./src/assets/images/me.png" className={style["image"]} alt="Me" />
       <div className={style["subContainer"]}>
         <h2>{t("AboutMe.Title")}</h2>
         <p className={style["text"]}>
@@ -28,9 +28,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
         </p>
         <Carousel />
         <button className={style["button"]}>{t("Home.DownloadCV")}</button>
-
       </div>
-      
     </div>
   );
 });

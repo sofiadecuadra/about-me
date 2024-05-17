@@ -7,11 +7,11 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
 
   return (
-    <div className={style["background"]}>
-      <div className={style["container"]} ref={ref}>
+    <div className={style.background}>
+      <div className={style.container} ref={ref}>
         <div className={style["title-container"]}>
-          <h2 className={style["text"]}>{t("CleanUp.Title")}</h2>
-          <p className={style["text"]}>{t("CleanUp.Description")}</p>
+          <h2 className={style.text}>{t("CleanUp.Title")}</h2>
+          <p className={style.text}>{t("CleanUp.Description")}</p>
         </div>
         <Card
           title={t("CleanUp.Problem.Title")}
@@ -20,7 +20,7 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           image="./src/assets/images/cleanup/cleanup.png"
           imageWidth="350px"
         />
-        <div className={style["solution"]}>
+        <div className={style.solution}>
           <Card
             title={t("CleanUp.Solution.Title")}
             description={t("CleanUp.Solution.Description")}
@@ -53,9 +53,7 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           imageWidth="700px"
           maxTextWidth="320px"
         />
-        <button className={style["button"]}>
-        {t("CleanUp.WatchDemo")}
-        </button>
+        <button className={style.button}>{t("CleanUp.WatchDemo")}</button>
       </div>
     </div>
   );

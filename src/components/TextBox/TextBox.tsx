@@ -57,6 +57,7 @@ const TextBox = ({
             setError("");
           }}
           name={name}
+          style={{ width: width }}
         />
       )}
     </div>

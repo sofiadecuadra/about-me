@@ -138,7 +138,6 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
             placeholder={t("ContactMe.FormPlaceholder.Message")}
             required
             height="112px"
-            width="516px"
             multiline
             setField={setMessage}
             error={messageError}
@@ -150,7 +149,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
           </button>
         </form>
       </div>
-      <img src="./src/assets/images/me.png" alt="Me"></img>
+      {/* <img src="./src/assets/images/me.png" alt="Me"></img> */}
     </div>
   );
 });

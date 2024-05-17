@@ -1,21 +1,54 @@
 .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    align-self: center;
-    justify-content: space-between;
-    max-width: 1170px;
-    margin: 0 auto;
-    margin-bottom: 68px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .subContainer {
-    flex-direction: column;
-    gap: 10px;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
 }
 
 .button {
-    width: fit-content;
-    margin-top: 16px;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .memoji-web {
+    display: none;
+  }
+  .memoji-mobile {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .subContainer {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .memoji-web {
+    width: 26rem;
+    margin-top: 0;
+  }
+
+  .memoji-mobile {
+    display: none;
+  }
 }

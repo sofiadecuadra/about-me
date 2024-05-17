@@ -3,15 +3,12 @@
 }
 
 .container {
-    height: 100%;
     display: flex;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding-bottom: 68px;
     flex-direction: column;
-    gap: 91px;
-    padding-top: 82px;
-    
+    gap: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 5rem 1rem 4rem 1rem;
 }
 
 .title-container {
