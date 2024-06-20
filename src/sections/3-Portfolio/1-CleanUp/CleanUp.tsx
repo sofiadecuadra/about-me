@@ -2,47 +2,54 @@ import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import style from "./CleanUp.module.css";
 import Card from "../../../components/Card/Card";
+import cleanupImg from "../../../assets/images/cleanup/cleanup.png"; 
 
 const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
 
+  const handleCleanUpDemoClick = () => {
+    window.open("https://www.youtube.com/watch?v=yFOnTAac8FI", "_blank");
+  };
+
   return (
-    <div className={style.background}>
-      <div className={style.container} ref={ref}>
+    <div className={style.background} ref={ref}>
+      <div className={style.container} >
         <div className={style["title-container"]}>
           <h2 className={style.text}>{t("CleanUp.Title")}</h2>
           <p className={style.text}>{t("CleanUp.Description")}</p>
         </div>
-        <Card
-          title={t("CleanUp.Problem.Title")}
-          description={t("CleanUp.Problem.Description.First")}
-          variant="cleanup"
-          image="./src/assets/images/cleanup/cleanup.png"
-          imageWidth="350px"
-        />
-        <div className={style.solution}>
-          <Card
-            title={t("CleanUp.Solution.Title")}
-            description={t("CleanUp.Solution.Description")}
-            variant="cleanup"
+        <div className={style["problem-container"]}>
+        <img
+            src={cleanupImg}
+            className={style.image}
+            alt="Img"
           />
+          <div>
+            <Card
+              title={t("CleanUp.Problem.Title")}
+              description={t("CleanUp.Problem.Description")}
+              variant="cleanup"
+            />
+          </div>
         </div>
+
+        <Card
+          title={t("CleanUp.Solution.Title")}
+          description={t("CleanUp.Solution.Description")}
+          variant="cleanup"
+        />
         <Card
           title={t("CleanUp.Procedures.Title")}
           description={t("CleanUp.Procedures.Description")}
           variant="cleanup"
           image="./src/assets/images/cleanup/procedures.png"
           imagePosition="right"
-          imageWidth="700px"
-          maxTextWidth="320px"
         />
         <Card
           title={t("CleanUp.Alerts.Title")}
           description={t("CleanUp.Alerts.Description")}
           variant="cleanup"
           image="./src/assets/images/cleanup/alerts.png"
-          imageWidth="700px"
-          maxTextWidth="320px"
         />
         <Card
           title={t("CleanUp.Calendar.Title")}
@@ -50,10 +57,10 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           variant="cleanup"
           image="./src/assets/images/cleanup/calendar.png"
           imagePosition="right"
-          imageWidth="700px"
-          maxTextWidth="320px"
         />
-        <button className={style.button}>{t("CleanUp.WatchDemo")}</button>
+        <button onClick={handleCleanUpDemoClick} className={style.button}>
+          {t("CleanUp.WatchDemo")}
+        </button>
       </div>
     </div>
   );

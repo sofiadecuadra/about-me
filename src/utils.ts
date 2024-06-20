@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const HEADER_HEIGHT = 68;
+export const HEADER_HEIGHT = 0;
 
 export type Section =
   | "Home"
@@ -46,10 +46,7 @@ export function useWindowDimensions() {
   return windowDimensions;
 }
 
-export const handleLinkedInClick = () => {
-  window.open(import.meta.env.LINKEDIN_URL, "_blank");
-};
+// export const handleLinkedInClick = () => {
+//   window.open(import.meta.env.LINKEDIN_URL, "_blank");
+// };
 
-export const handleEmailClick = () => {
-  window.location.href = import.meta.env.MAIL_URL;
-};

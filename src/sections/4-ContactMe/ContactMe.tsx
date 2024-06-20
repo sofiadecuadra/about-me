@@ -63,7 +63,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
     const form = document.getElementById("contact-form");
 
     if (form instanceof HTMLFormElement) {
-      const toastId = toast.loading(t("ContactMe.Sending")); // Notificación de carga
+      const toastId = toast.loading(t("ContactMe.Sending"));
 
       emailjs.sendForm(serviceId, templateId, form, publicKey).then(
         (_result) => {
@@ -74,6 +74,9 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
             autoClose: 5000,
           });
           form.reset();
+          setName("");
+          setEmail("");
+          setMessage("");
         },
         (_error) => {
           toast.update(toastId, {
@@ -99,8 +102,8 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div
       className={style["container"]}
-      style={{ height: height - HEADER_HEIGHT }}
       ref={ref}
+      style={{ height: height - HEADER_HEIGHT}}
     >
       <div className={style["subContainer"]}>
         <h2>{t("ContactMe.Title")}</h2>
@@ -109,8 +112,9 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
           className={style["form-container"]}
           id="contact-form"
           onSubmit={handleFormSubmit}
-        >
+        > 
           <div className={style["user-info"]}>
+            <div className={style["width"]}>
             <TextBox
               label="Name"
               name="from_name"
@@ -121,6 +125,8 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
               setError={setNameError}
               inputRef={nameRef}
             />
+            </div>
+            <div className={style["width"]}>
             <TextBox
               label="Email"
               name="from_email"
@@ -131,6 +137,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
               setError={setEmailError}
               inputRef={emailRef}
             />
+            </div>
           </div>
           <TextBox
             label="Message"
@@ -149,7 +156,6 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
           </button>
         </form>
       </div>
-      {/* <img src="./src/assets/images/me.png" alt="Me"></img> */}
     </div>
   );
 });

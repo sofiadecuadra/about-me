@@ -8,12 +8,7 @@
   padding-top: 5rem;
   padding-bottom: 4rem;
   gap: 2rem;
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  min-height: 660px;
 }
 
 .subContainer {
@@ -44,7 +39,21 @@
   margin: 2rem 0;
 }
 
+@media (max-width: 768px) {
+.image {
+  width: 70%;
+  height: auto;
+  max-height: 400px;;
+  object-fit: contain;
+}
+}
+
 @media (min-width: 768px) {
+  .image {
+    width: auto;
+    height: 550px;
+  }
+
   .container {
     flex-direction: row;
     justify-content: space-between;

@@ -5,7 +5,7 @@
     --color-primary: #ff54d9;
     --color-primary-light: #ff98e8;
     --color-primary-lightest: #ffd3f6;
-    --color-white: rgba(255, 255, 255, 0.93);
+    --color-white: #ffffffed;
 
     /* CleanUp */
     --color-cleanup: #1556b1;
@@ -43,7 +43,6 @@ body {
     display: flex;
     place-items: center;
     min-width: 320px;
-    min-height: 100vh;
     font-size: 1rem;
 }
 

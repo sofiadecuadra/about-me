@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import style from "./TextBox.module.css";
+import classNames from "classnames";
 
 interface InputProps {
   label: string;
@@ -13,6 +14,7 @@ interface InputProps {
   setError: (error: string) => void;
   inputRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement>;
   name?: string;
+  className?: string;
 }
 
 const TextBox = ({
@@ -27,6 +29,7 @@ const TextBox = ({
   setError,
   inputRef,
   name,
+  className,
 }: InputProps) => {
   return (
     <div className={style["container"]}>
@@ -42,15 +45,15 @@ const TextBox = ({
             setField(event.target.value.trim());
             setError("");
           }}
-          className={style["text-box"]}
+          className={classNames(style["text-box"], className)}
           placeholder={placeholder}
-          style={{ height: height, width: width, paddingTop: "12px" }}
+          style={{ height: height, paddingTop: "12px" }}
           name={name}
         />
       ) : (
         <input
           ref={inputRef as React.RefObject<HTMLInputElement>}
-          className={style["text-box"]}
+          className={classNames(style["text-box"], className)}
           placeholder={placeholder}
           onChange={(event) => {
             setField(event.target.value.trim());

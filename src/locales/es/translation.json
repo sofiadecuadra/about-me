@@ -22,38 +22,32 @@
     "AboutMe": {
         "Title": "Sobre mí",
         "Description": {
-            "First": "Me acabo de graduar como Ingeniera en Sistemas y estoy en la búsqueda de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque domino ambos.",
+            "First": "Me acabo de graduar como Ingeniera en Sistemas y estoy en la búsqueda de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque disfruto de ambos.",
             "Second": "En cuanto a mi experiencia laboral, pasé un año trabajando para la empresa 'CleanUp' como parte de mi proyecto de fin de carrera. Los detalles se pueden encontrar en mi portafolio.",
-            "Third": "Tengo muchas ganas de aprender y utilizar lo aprendido en una empresa. Me considero adaptable, responsable y amigable."
+            "Third": "Tengo muchas ganas de aprender y utilizar lo aprendido en una empresa. Me considero flexible, responsable y amigable."
         }
     },
     "CleanUp": {
         "Title": "CleanUp",
         "Description": "This project started as part of my final degree project. Within the project, I took on various roles, such as mobile developer (React native), web developer (React) and UX/UI designer.",
         "Problem": {
-            "Title": "The problem",
-            "Description": {
-                "First": "Frequent training due to high turnover of cleaning staff.",
-                "Second": "Different ways of cleaning...",
-                "Third": "Accidents occur which impact on hygiene quality and can take a long time to be reported and resolved.",
-                "Fourth": "Difficulties in keeping a record of what has been cleaned.",
-                "Fifth": "Difficulties in managing cleaning teams."
-            }
+            "Title": "El problema",
+            "Description": "La gestión de operaciones de limpieza en edificios presenta varios desafíos. La alta rotación entre los limpiadores requiere capacitación constante, los diversos métodos de limpieza generan resultados inconsistentes, los accidentes diarios comprometen la higiene y mantener registros precisos puede ser difícil."
         },
         "Solution": {
-            "Title": "The solution",
-            "Description": "The solution was to create a web application for managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
+            "Title": "La solución",
+            "Description": "La solución fue crear una aplicación web para los encargados del edificio y una aplicación móvil para los operarios de limpieza. Todo gira en torno a códigos QR que se colocan en cada espacio del edificio y que son únicos para cada uno de ellos."
         },
         "Procedures": {
-            "Title": "Procedures",
+            "Title": "Procedimientos",
             "Description": "Managers can configure how spaces should be cleaned. The QR codes (placed in the building) can then be scanned by the cleaners to read the cleaning procedure for the space they are going to clean."
         },
         "Alerts": {
-            "Title": "Alerts",
+            "Title": "Alertas",
             "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
         },
         "Calendar": {
-            "Title": "Calendar",
+            "Title": "Calendario",
             "Description": "Managers can create a schedule of tasks and assign these to cleaners. Cleaners from their mobile application can access the tasks they have for the day."
         },
         "WatchDemo": "Ver demo"

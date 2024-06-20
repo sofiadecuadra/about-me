@@ -22,9 +22,9 @@
     "AboutMe": {
         "Title": "About me",
         "Description": {
-            "First": "I'm a hardworking, just graduated software engineer looking for job opportunities. I recently discovered that I have a strong interest in frontend development, even more than backend, although I am proficient in both.",
-            "Second": "As for my work experience, I spent 1 year working for the company 'CleanUp,' where my team and I built an application for cleaning management. Further details can be found in my portfolio.",
-            "Third": "I'm eager to learn and ready to use what I've learned in a company. I consider myself to be adaptable, responsible and friendly."
+            "First": "I'm a recent graduate in software engineering, actively seeking job opportunities. Recently, I've discovered a strong interest in front-end development, although I find both front-end and back-end roles enjoyable. ",
+            "Second": "I'm dedicated and goal-oriented, with a quick learning ability that helps me adapt to various technologies and roles. I can effectively self-manage during independent projects and collaborate as part of a team.",
+            "Third": "As for my work experience, I spent 1 year working for the company 'CleanUp,' where my team and I built an application for cleaning management. Further details can be found in my portfolio."
         },
         "Languages": {
             "Title": "Languages",
@@ -37,17 +37,11 @@
         "Description": "This project started as part of my final degree project. Within the project, I took on various roles, such as mobile developer (React native), web developer (React) and UX/UI designer.",
         "Problem": {
             "Title": "The problem",
-            "Description": {
-                "First": "Frequent training due to high turnover of cleaning staff.",
-                "Second": "Different ways of cleaning...",
-                "Third": "Accidents occur which impact on hygiene quality and can take a long time to be reported and resolved.",
-                "Fourth": "Difficulties in keeping a record of what has been cleaned.",
-                "Fifth": "Difficulties in managing cleaning teams."
-            }
+            "Description": "Managing cleaning operations in buildings poses several challenges. High turnover among cleaners requires constant training, diverse cleaning methods lead to inconsistent results, daily accidents compromise hygiene, and maintaining accurate records can be difficult."
         },
         "Solution": {
             "Title": "The solution",
-            "Description": "The solution was to create a web application for managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
+            "Description": "The solution was to create a web application for building managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
         },
         "Procedures": {
             "Title": "Procedures",

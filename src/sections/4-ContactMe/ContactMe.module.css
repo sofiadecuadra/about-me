@@ -5,11 +5,12 @@
     margin: 0 auto;
     padding-top: 5rem;
     padding-bottom: 4rem;
+    min-height: 660px;
 }
 
 .subContainer {
     flex-direction: column;
-    gap: 2rem;
+    gap: 26px;
     display: flex;
 }
 
@@ -18,16 +19,12 @@
     margin-top: 16px;
 }
 
-.text {
-    max-width: 500px;
-}
-
 .button-container {
     margin-top: 18px;
 }
 
 .buttons-container {
-    gap: 24px;
+    gap: 26px;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -38,8 +35,9 @@
 .form-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 26px;
     margin-top: 18px;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -49,10 +47,13 @@
         gap: 26px;
     }
 
-    .container {
+    .subContainer {
         align-items: center;
-        justify-content: center;
-        display: flex;
+        text-align: center;
+    }
+
+    .button {
+        align-self: center;
     }
 }
 
@@ -77,6 +78,10 @@
     .user-info {
         display: flex;
         flex-direction: row;
-        gap: 28px;
+        gap: 26px;
+    }
+
+    .width {
+        width: 100%;
     }
 }
