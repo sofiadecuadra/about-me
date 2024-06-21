@@ -14,16 +14,22 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
-          node-version: '16'
+          node-version: 18
+
+      - name: Export environment variables
+        run: |
+          echo "REACT_APP_SERVICE_ID=${{ secrets.REACT_APP_SERVICE_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_TEMPLATE_ID=${{ secrets.REACT_APP_TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "REACT_APP_PUBLIC_KEY=${{ secrets.REACT_APP_PUBLIC_KEY }}" >> $GITHUB_ENV
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
-        run: yarn run dev
+        run: yarn run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
