@@ -28,7 +28,7 @@ const Home = forwardRef<HTMLDivElement, HomeProps>(({ scrollToContactMe }, ref) 
         <img src={memojiImg} alt="Memoji" className={style["memoji-mobile"]} />
         <h6>{t("Home.Career")}</h6>
         <p>{t("Home.Description")}</p>
-        <button className={style["button"]} onClick={scrollToContactMe}>{t("Home.HireMe")}</button>
+        <button className={style["button"]} onClick={scrollToContactMe}>{t("Home.ContactMe")}</button>
       </div>
       <img src={memojiImg} alt="Memoji" className={style["memoji-web"]} />
     </div>

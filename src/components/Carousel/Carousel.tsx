@@ -1,8 +1,8 @@
+import React from "react";
 import {
   CSSLogo,
   CSharpLogo,
   GitLogo,
-  HTMLLogo,
   JavaScriptLogo,
   NodeLogo,
   ReactLogo,
@@ -11,25 +11,24 @@ import {
 import styles from "./Carousel.module.css";
 
 const Carousel = () => {
+  const numRepetitions = 4;
+  
+  const logoSets = [...Array(numRepetitions)];
+
   return (
     <div className={styles.container}>
       <div className={styles.marquee}>
-        <TypescriptLogo className={styles["logo"]} />
-        <ReactLogo className={styles["logo"]} />
-        <HTMLLogo className={styles["logo"]} />
-        <CSSLogo className={styles["logo"]} />
-        <JavaScriptLogo className={styles["logo"]} />
-        <GitLogo className={styles["logo"]} />
-        <NodeLogo className={styles["logo"]} />
-        <CSharpLogo className={styles["logo"]} />
-        <TypescriptLogo className={styles["logo"]} />
-        <ReactLogo className={styles["logo"]} />
-        <HTMLLogo className={styles["logo"]} />
-        <CSSLogo className={styles["logo"]} />
-        <JavaScriptLogo className={styles["logo"]} />
-        <GitLogo className={styles["logo"]} />
-        <NodeLogo className={styles["logo"]} />
-        <CSharpLogo className={styles["logo"]} />
+        {logoSets.map((_, index) => (
+          <React.Fragment key={index}>
+            <TypescriptLogo className={styles.logo} />
+            <ReactLogo className={styles.logo} />
+            <CSSLogo className={styles.logo} />
+            <JavaScriptLogo className={styles.logo} />
+            <GitLogo className={styles.logo} />
+            <NodeLogo className={styles.logo} />
+            <CSharpLogo className={styles.logo} />
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );

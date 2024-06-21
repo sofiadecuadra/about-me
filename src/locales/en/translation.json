@@ -16,15 +16,15 @@
         "Greetings": "Hi there 👋 I’m",
         "Career": "Software engineer 👩‍💻",
         "Description": "Based in Uruguay 🇺🇾",
-        "HireMe": "Hire me",
+        "ContactMe": "Contact me",
         "DownloadCV": "Download CV"
     },
     "AboutMe": {
         "Title": "About me",
         "Description": {
             "First": "I'm a recent graduate in software engineering, actively seeking job opportunities. Recently, I've discovered a strong interest in front-end development, although I find both front-end and back-end roles enjoyable. ",
-            "Second": "I'm dedicated and goal-oriented, with a quick learning ability that helps me adapt to various technologies and roles. I can effectively self-manage during independent projects and collaborate as part of a team.",
-            "Third": "I completed a year-long software development internship where I contributed to building an application for cleaning management. Further details can be found below."
+            "Second": "I am skilled at quickly adapting to new technologies and roles, effective in independently managing projects, and enjoy collaborating within teams.",
+            "Third": "In regards to my experience in the software industry, I completed a year-long software development internship at 'CleanUp', where I contributed to the creation of an application for cleaning management. Further details can be found below."
         },
         "Languages": {
             "Title": "Languages",
