@@ -1,7 +1,5 @@
 import { RefObject, useCallback, useEffect, useRef, useState } from "react";
 import { I18nextProvider } from "react-i18next";
-// import ReactSnapScroll from "react-snap-scroll";
-import useScrollSnap from "react-use-scroll-snap";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./sections/1-Home/Home";
 import AboutMe from "./sections/2-AboutMe/AboutMe";
@@ -10,12 +8,11 @@ import i18n from "./translation";
 import { Section } from "./utils";
 import CleanUp from "./sections/3-Portfolio/1-CleanUp/CleanUp";
 import Expensify from "./sections/3-Portfolio/2-Expensify/Expensify";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
-  // useScrollSnap({ ref: containerRef, duration: 100 });
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLDivElement>(null);
