@@ -22,9 +22,9 @@
     "AboutMe": {
         "Title": "Sobre mí",
         "Description": {
-            "First": "Me acabo de graduar como Ingeniera en Sistemas y estoy en la búsqueda de oportunidades de trabajo. Recientemente he descubierto que me interesa mucho el desarrollo frontend, incluso más que el backend, aunque disfruto de ambos.",
-            "Second": "En cuanto a mi experiencia laboral, pasé un año trabajando para la empresa 'CleanUp' como parte de mi proyecto de fin de carrera. Los detalles se pueden encontrar en mi portafolio.",
-            "Third": "Tengo muchas ganas de aprender y utilizar lo aprendido en una empresa. Me considero flexible, responsable y amigable."
+            "First": "Me acabo de graduar como ingeniera de software y estoy buscando activamente oportunidades laborales. Recientemente, descubrí un gran interés en el desarrollo front-end, aunque disfruto tanto de roles en front-end como en back-end.",
+            "Second": "",
+            "Third": ""
         }
     },
     "CleanUp": {

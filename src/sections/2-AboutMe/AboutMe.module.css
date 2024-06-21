@@ -40,18 +40,22 @@
 }
 
 @media (max-width: 768px) {
-.image {
-  width: 70%;
-  height: auto;
-  max-height: 400px;;
-  object-fit: contain;
-}
+  .image {
+    width: 70%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
 }
 
 @media (min-width: 768px) {
   .image {
     width: auto;
     height: 550px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   .container {
