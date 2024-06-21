@@ -4,14 +4,28 @@
   gap: 16px;
   width: 100%;
   align-items: center;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
 .leftImage {
   flex-direction: column;
+  transform: translateX(-100px);
 }
 
 .rightImage {
   flex-direction: column;
+  transform: translateX(100px);
+}
+
+.leftVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.rightVisible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .subContainer {

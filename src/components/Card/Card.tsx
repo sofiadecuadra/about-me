@@ -1,4 +1,6 @@
+import { useEffect, useRef } from "react";
 import style from "./Card.module.css";
+import { observeElement } from "../../utils";
 
 interface CardProps {
   title: string;
@@ -19,11 +21,20 @@ const Card = ({
   imageWidth = "100%",
   maxTextWidth = "500px",
 }: CardProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const className = imagePosition === "right" ? style.rightVisible : style.leftVisible;
+    const unobserve = observeElement(containerRef, className);
+    return () => unobserve();
+  }, [imagePosition]);
+
   return (
     <div
       className={`${style.container} ${
         imagePosition === "right" ? style.rightImage : style.leftImage
       }`}
+      ref={containerRef}
     >
       {image && <img src={image} alt="Card" className={style.image} style={{ width: imageWidth }} />}
       <div style={{ maxWidth: maxTextWidth }} className={style.subContainer}>

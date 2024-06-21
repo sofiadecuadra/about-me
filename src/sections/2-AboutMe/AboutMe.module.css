@@ -9,6 +9,7 @@
   padding-bottom: 4rem;
   gap: 2rem;
   min-height: 660px;
+  overflow: hidden;
 }
 
 .subContainer {
@@ -39,14 +40,25 @@
   margin: 2rem 0;
 }
 
+.image {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .image {
     width: 70%;
     height: auto;
     max-height: 400px;
     object-fit: contain;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
   }
 }
 
@@ -54,8 +66,6 @@
   .image {
     width: auto;
     height: 550px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
   }
 
   .container {
