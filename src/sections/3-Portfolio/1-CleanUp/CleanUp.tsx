@@ -2,7 +2,11 @@ import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import style from "./CleanUp.module.css";
 import Card from "../../../components/Card/Card";
-import cleanupImg from "../../../assets/images/cleanup/cleanup.png"; 
+import cleanupImg from "../../../assets/images/cleanup/cleanup.png";
+import alertsImg from "../../../assets/images/cleanup/alerts.png"; 
+import calendarImg from "../../../assets/images/cleanup/calendar.png"; 
+import proceduresImg from "../../../assets/images/cleanup/procedures.png"; 
+
 
 const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
@@ -42,20 +46,20 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           title={t("CleanUp.Procedures.Title")}
           description={t("CleanUp.Procedures.Description")}
           variant="cleanup"
-          image="./src/assets/images/cleanup/procedures.png"
+          image={proceduresImg}
           imagePosition="right"
         />
         <Card
           title={t("CleanUp.Alerts.Title")}
           description={t("CleanUp.Alerts.Description")}
           variant="cleanup"
-          image="./src/assets/images/cleanup/alerts.png"
+          image={alertsImg}
         />
         <Card
           title={t("CleanUp.Calendar.Title")}
           description={t("CleanUp.Calendar.Description")}
           variant="cleanup"
-          image="./src/assets/images/cleanup/calendar.png"
+          image={calendarImg}
           imagePosition="right"
         />
         <button onClick={handleCleanUpDemoClick} className={style.button}>

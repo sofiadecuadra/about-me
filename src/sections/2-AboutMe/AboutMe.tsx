@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Carousel from "../../components/Carousel/Carousel";
 import { HEADER_HEIGHT, observeElement, useWindowDimensions } from "../../utils";
 import style from "./AboutMe.module.css";
+import meImg from "../../assets/images/me.png"
 
 const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div className={style["container"]} style={containerStyle} ref={ref}>
       <img
-        src="./src/assets/images/me.jpg"
+        src={meImg}
         className={style["image"]}
         alt="Me"
         ref={imgRef}

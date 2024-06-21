@@ -2,6 +2,9 @@ import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import style from "./Expensify.module.css";
 import Card from "../../../components/Card/Card";
+import categoriesImg from "../../../assets/images/expensify/categories.png"
+import expensesImg from "../../../assets/images/expensify/expenses.png"
+
 
 const Expensify = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
@@ -17,13 +20,13 @@ const Expensify = forwardRef<HTMLDivElement>((_, ref) => {
           title={t("Expensify.Categories.Title")}
           description={t("Expensify.Categories.Description")}
           variant="expensify"
-          image="./src/assets/images/expensify/categories.png"
+          image={categoriesImg}
         />
         <Card
           title={t("Expensify.Expenses.Title")}
           description={t("Expensify.Expenses.Description")}
           variant="expensify"
-          image="./src/assets/images/expensify/expenses.png"
+          image={expensesImg}
           imagePosition="right"
         />
       </div>

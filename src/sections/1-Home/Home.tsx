@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { HEADER_HEIGHT, useWindowDimensions } from "../../utils";
 import style from "./Home.module.css";
+import memojiImg from "../../assets/images/memoji.png"
 
 interface HomeProps {
   scrollToContactMe: () => void;
@@ -24,12 +25,12 @@ const Home = forwardRef<HTMLDivElement, HomeProps>(({ scrollToContactMe }, ref) 
           <br />
           {t("Home.Surname")}
         </h1>
-        <img src="./src/assets/images/memoji.png" alt="Memoji" className={style["memoji-mobile"]} />
+        <img src={memojiImg} alt="Memoji" className={style["memoji-mobile"]} />
         <h6>{t("Home.Career")}</h6>
         <p>{t("Home.Description")}</p>
         <button className={style["button"]} onClick={scrollToContactMe}>{t("Home.HireMe")}</button>
       </div>
-      <img src="./src/assets/images/memoji.png" alt="Memoji" className={style["memoji-web"]} />
+      <img src={memojiImg} alt="Memoji" className={style["memoji-web"]} />
     </div>
   );
 });
