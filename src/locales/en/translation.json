@@ -82,7 +82,7 @@
         "Success": "Message sent successfully!",
         "Sending": "Sending message...",
         "FormPlaceholder": {
-            "Name": "E.g. Jean",
+            "Name": "E.g. Harry",
             "Email": "mail@example.com",
             "Message": "E.g. I would like to get in touch with you to talk about..."
         }

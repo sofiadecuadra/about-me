@@ -96,7 +96,7 @@ function App() {
           pauseOnHover
           style={{ fontFamily: "Manrope", fontSize: "medium" }}
         />
-        <p style={{ textAlign: "center", paddingBottom: "16px" }}>&copy; Derechos de autor Sofía Decuadra 2024</p>
+        <p style={{ textAlign: "center", paddingBottom: "16px" }}>&copy; Copyright Sofía Decuadra 2024</p>
       </div>
     </I18nextProvider>
   );
