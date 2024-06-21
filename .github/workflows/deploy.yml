@@ -21,9 +21,9 @@ jobs:
 
       - name: Export environment variables
         run: |
-          echo "REACT_APP_SERVICE_ID=${{ secrets.REACT_APP_SERVICE_ID }}" >> $GITHUB_ENV
-          echo "REACT_APP_TEMPLATE_ID=${{ secrets.REACT_APP_TEMPLATE_ID }}" >> $GITHUB_ENV
-          echo "REACT_APP_PUBLIC_KEY=${{ secrets.REACT_APP_PUBLIC_KEY }}" >> $GITHUB_ENV
+          echo "VITE_REACT_APP_SERVICE_ID=${{ secrets.VITE_REACT_APP_SERVICE_ID }}" >> $GITHUB_ENV
+          echo "VITE_REACT_APP_TEMPLATE_ID=${{ secrets.VITE_REACT_APP_TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "VITE_REACT_APP_PUBLIC_KEY=${{ secrets.VITE_REACT_APP_PUBLIC_KEY }}" >> $GITHUB_ENV
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
