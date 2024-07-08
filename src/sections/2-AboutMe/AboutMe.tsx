@@ -19,6 +19,10 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
     return () => unobserve();
   }, []);
 
+  const handleCVClick = () => {
+    window.open("https://drive.google.com/file/d/1s5L3BgKtMXnsKDw_ITIw0B5WisQnjf1m/view?usp=sharing", "_blank");
+  };
+
   return (
     <div className={style["container"]} style={containerStyle} ref={ref}>
       <img
@@ -39,7 +43,7 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
           {t("AboutMe.Description.Third")}
         </p>
         <Carousel />
-        {/* <button className={style["button"]}>{t("Home.DownloadCV")}</button> */}
+        <button onClick={handleCVClick} className={style["button"]}>{t("Home.OpenCV")}</button>
       </div>
     </div>
   );
