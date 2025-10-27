@@ -1,16 +1,14 @@
 import { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Section, sections } from "../../utils";
-import NavOption from "./NavOption/NavOption";
-import style from "./Navbar.module.css";
 import classNames from "classnames";
-import { MenuIcon } from "../../assets/icons";
 
-interface NavbarProps {
-  scrollToSection: (section: Section) => void;
-  variant?: "default" | "cleanup" | "expensify";
-  currentSection: Section;
-}
+import { sections } from "@/utils";
+import { MenuIcon } from "@assets/icons";
+
+import NavOption from "./NavOption/NavOption";
+import LanguageSelector from "./LanguageSelector/LanguageSelector";
+import style from "./Navbar.module.css";
+import { NavbarProps } from "./types";
 
 const Navbar: FC<NavbarProps> = ({
   scrollToSection,
@@ -27,16 +25,26 @@ const Navbar: FC<NavbarProps> = ({
 
   return (
     <div
-      className={classNames(style["container"], style[`background-${variant}`])}
-      onClick={() => setDisplayMenuOptions(!displayMenuOptions)}
+      className={classNames(style.container, style[`background-${variant}`])}
     >
-      <MenuIcon
+      <div className={style.placeholder}></div>
+      <div className={style["menu-icon-container"]}>
+        <MenuIcon
+          className={classNames(
+            style["menu-icon"],
+            style[`menu-icon-color-${variant}`]
+          )}
+          onClick={() => setDisplayMenuOptions(!displayMenuOptions)}
+        />
+      </div>
+      <div
         className={classNames(
-          style["menu-icon"],
-          style[`menu-icon-color-${variant}`]
+          style["menu-options-container"],
+          style[`background-mobile-${variant}`],
+          { [style.active]: displayMenuOptions },
+          { [style.inactive]: !displayMenuOptions }
         )}
-      />
-      <div className={classNames(style["menu-options-container"], style[`background-mobile-${variant}`], { [style.active]: displayMenuOptions }, { [style.inactive]: !displayMenuOptions })}>
+      >
         {sections.map((item) => (
           <NavOption
             key={item}
@@ -50,6 +58,12 @@ const Navbar: FC<NavbarProps> = ({
             variant={variant}
           />
         ))}
+        <div className={style["mobile-language-selector"]}>
+          <LanguageSelector variant={variant} />
+        </div>
+      </div>
+      <div className={style["desktop-language-selector"]}>
+        <LanguageSelector variant={variant} />
       </div>
     </div>
   );

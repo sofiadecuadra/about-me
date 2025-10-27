@@ -1,0 +1,15 @@
+.language-selector-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector-wrapper .nav-option {
+  padding: 12px 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .language-selector-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}

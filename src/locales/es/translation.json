@@ -1,85 +1,132 @@
 {
-    "Sections": {
-        "Home": "Inicio",
-        "AboutMe": "Sobre mí",
-        "Portfolio": "Portfolio",
-        "ContactMe": "Contacto"
+  "Sections": {
+    "Home": "Inicio",
+    "AboutMe": "Sobre mí",
+    "Portfolio": "Experiencia Laboral",
+    "TravelMap": "Mis Viajes",
+    "ContactMe": "Contacto"
+  },
+  "SocialMedia": {
+    "LinkedIn": "LinkedIn",
+    "GitHub": "GitHub",
+    "Email": "Correo"
+  },
+  "Home": {
+    "Name": "Sofía",
+    "Surname": "Decuadra",
+    "Greetings": "Hola! 👋 soy",
+    "Career": "Ingeniera en Sistemas 👩‍💻",
+    "Description": "Uruguay 🇺🇾",
+    "ContactMe": "Contáctame",
+    "OpenCV": "Ver CV"
+  },
+  "AboutMe": {
+    "Title": "Sobre mí",
+    "Description": {
+      "First": "Ingeniera de Software con experiencia full-stack. Apasionada por construir productos confiables y bien elaborados",
+      "Second": "Me enfoco en diseñar arquitecturas mantenibles y escalables, escribir código limpio y seguir buenas prácticas, además de aplicar mis conocimientos en ciberseguridad para hacer las aplicaciones más robustas.",
+      "Third": "Soy entusiasta y proactiva, me gusta compartir conocimientos y aprender de los demás, y siempre busco mantenerme actualizada con las últimas tecnologías."
     },
-    "SocialMedia": {
-        "LinkedIn": "LinkedIn",
-        "GitHub": "GitHub",
-        "Email": "Correo"
-    },
-    "Home": {
-        "Name": "Sofía",
-        "Surname": "Decuadra",
-        "Greetings": "Hola! 👋 soy",
-        "Career": "Ingeniera en Sistemas 👩‍💻",
-        "Description": "Uruguay 🇺🇾",
-        "ContactMe": "Contáctame",
-        "OpenCV": "Ver CV"
-    },
-    "AboutMe": {
-        "Title": "Sobre mí",
-        "Description": {
-            "First": "Me acabo de graduar como ingeniera de software y estoy buscando activamente oportunidades laborales. Recientemente, descubrí un gran interés en el desarrollo front-end, aunque disfruto tanto de roles en front-end como en back-end.",
-            "Second": "",
-            "Third": ""
-        }
-    },
-    "CleanUp": {
-        "Title": "CleanUp",
-        "Description": "This project started as part of my final degree project. Within the project, I took on various roles, such as mobile developer (React native), web developer (React) and UX/UI designer.",
-        "Problem": {
-            "Title": "El problema",
-            "Description": "La gestión de operaciones de limpieza en edificios presenta varios desafíos. La alta rotación entre los limpiadores requiere capacitación constante, los diversos métodos de limpieza generan resultados inconsistentes, los accidentes diarios comprometen la higiene y mantener registros precisos puede ser difícil."
-        },
-        "Solution": {
-            "Title": "La solución",
-            "Description": "La solución fue crear una aplicación web para los encargados del edificio y una aplicación móvil para los operarios de limpieza. Todo gira en torno a códigos QR que se colocan en cada espacio del edificio y que son únicos para cada uno de ellos."
-        },
-        "Procedures": {
-            "Title": "Procedimientos",
-            "Description": "Managers can configure how spaces should be cleaned. The QR codes (placed in the building) can then be scanned by the cleaners to read the cleaning procedure for the space they are going to clean."
-        },
-        "Alerts": {
-            "Title": "Alertas",
-            "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
-        },
-        "Calendar": {
-            "Title": "Calendario",
-            "Description": "Managers can create a schedule of tasks and assign these to cleaners. Cleaners from their mobile application can access the tasks they have for the day."
-        },
-        "WatchDemo": "Ver demo"
-    },
-    "Expensify": {
-        "Title": "Expensify",
-        "Description": "Web and mobile application for expense management in a family created as an academic project .",
-        "Categories": {
-            "Title": "Categories",
-            "Description": "Categories can be created to differentiate expenses according to them. This division is then used to extract metrics."
-        },
-        "Expenses": {
-            "Title": "Expenses",
-            "Description": "Expenses can be recorded and shared with family members. These include a name, date, category, and a photo of the invoice if desired."
-        }
-    },
-    "ContactMe": {
-        "Title": "Déjame un mensaje",
-        "Description": "Si estás interesado en mi perfil o tienes alguna pregunta, ¡no dudes en contactarme!",
-        "Submit": "Enviar mensaje",
-        "Errors": {
-            "Name": "Escribe tu nombre",
-            "Email": "Escribe un correo válido",
-            "Message": "Escribe un mensaje",
-            "Unknown": "Algo salió mal, inténtalo de nuevo más tarde"
-        },
-        "Success": "Mensaje enviado con éxito",
-        "Sending": "Enviando...",
-        "FormPlaceholder": {
-            "Name": "Ej. Juan",
-            "Email": "mail@example.com",
-            "Message": "Ej. Me gustaría ponernos en contacto para hablar sobre..."
-        }
+    "Languages": {
+      "Title": "Idiomas",
+      "English": "Inglés: Avanzado (Certificado Cambridge Nivel C1 - 2018)",
+      "Spanish": "Español: Nativo"
     }
+  },
+  "CleanUp": {
+    "Title": "CleanUp",
+    "Description": "Contribuí al desarrollo de una aplicación de gestión de limpieza de edificios, enfocándome en el desarrollo móvil y web utilizando React Native y React.",
+    "WorkExperience": {
+      "Title": "Frontend Developer",
+      "Period": "Abril 2023 – Abril 2024 (Pasantía)",
+      "Achievements": {
+        "Title": "Logros Principales",
+        "First": "Participé en el ciclo completo de desarrollo, desde la ideación hasta el despliegue, en un entorno de ritmo rápido, mejorando la coordinación del equipo y el flujo de trabajo.",
+        "Second": "Colaboré directamente con stakeholders para definir requisitos y entregar un producto adaptado a las necesidades del usuario.",
+        "Third": "Diseñé e implementé calendarios, gráficos y dashboards con excelente rendimiento y diseño responsivo."
+      }
+    },
+    "Problem": {
+      "Title": "El problema",
+      "Description": "La gestión de operaciones de limpieza en edificios presenta varios desafíos. La alta rotación entre los limpiadores requiere capacitación constante, los diversos métodos de limpieza generan resultados inconsistentes, los accidentes diarios comprometen la higiene y mantener registros precisos puede ser difícil."
+    },
+    "Solution": {
+      "Title": "La solución",
+      "Description": "La solución fue crear una aplicación web para los encargados del edificio y una aplicación móvil para los operarios de limpieza. Todo gira en torno a códigos QR que se colocan en cada espacio del edificio y que son únicos para cada uno de ellos."
+    },
+    "Procedures": {
+      "Title": "Procedimientos",
+      "Description": "Los administradores pueden configurar cómo deben limpiarse los espacios. Los códigos QR (colocados en el edificio) pueden ser escaneados por los limpiadores para leer el procedimiento de limpieza del espacio que van a limpiar."
+    },
+    "Alerts": {
+      "Title": "Alertas",
+      "Description": "Si ocurre un accidente, como derramar café o quedarse sin papel higiénico, cualquier persona puede escanear el código QR ubicado en el espacio donde ocurrió y reportarlo. Se enviará una notificación al administrador del edificio para asignar un limpiador, quien recibirá una notificación y podrá resolverlo lo antes posible."
+    },
+    "Calendar": {
+      "Title": "Calendario",
+      "Description": "Los administradores pueden crear un calendario de tareas y asignarlas a los limpiadores. Los limpiadores pueden acceder a sus tareas asignadas para el día y marcarlas como completadas, manteniendo así un registro de las áreas limpiadas."
+    },
+    "WatchDemo": "Ver demo",
+    "WebsiteButton": "Visitar sitio web"
+  },
+  "Expensify": {
+    "Title": "Expensify",
+    "Description": "Aplicación web y móvil para la gestión de gastos en familia creada como proyecto académico.",
+    "Categories": {
+      "Title": "Categorías",
+      "Description": "Se pueden crear categorías para diferenciar los gastos según las mismas. Esta división se utiliza luego para extraer métricas."
+    },
+    "Expenses": {
+      "Title": "Gastos",
+      "Description": "Los gastos pueden registrarse y compartirse con los miembros de la familia. Estos incluyen un nombre, fecha, categoría y una foto de la factura si se desea."
+    }
+  },
+  "LoopStudio": {
+    "Title": "LoopStudio",
+    "WorkExperience": {
+      "Title": "Full-Stack Engineer",
+      "Period": "Octubre 2024 – Presente",
+      "Description": "Trabajando en LoopStudio, una empresa con un fuerte enfoque en ciberseguridad, colaborando con clientes de Estados Unidos y utilizando principalmente Node.js, React y Python."
+    },
+    "Achievements": {
+      "Title": "Logros Principales",
+      "Payroll": {
+        "Title": "Aplicación de Nómina",
+        "Description": "Desarrollé una aplicación utilizando Node.js y React para calcular el pago de los empleados según las regulaciones laborales de EE.UU., garantizando pagos precisos y conformes."
+      },
+      "DaysOff": {
+        "Title": "Herramienta de Gestión de Días Libres",
+        "Description": "Construí una herramienta de gestión para los días libres de los empleados dentro de la empresa, con una interfaz web (React, Next.js), una extensión de Slack (Slack Bolt) y un backend impulsado por Node.js con NestJS, incluyendo aprobaciones, notificaciones y cálculos basados en tipo de contrato (dependiente o independiente)."
+      },
+      "Cybersecurity": {
+        "Title": "Capacitación en Ciberseguridad",
+        "Description": "Participé en capacitaciones internas de ciberseguridad para fortalecer la conciencia y las prácticas de desarrollo de software seguro."
+      },
+      "Awards": {
+        "Title": "Reconocimiento Interno",
+        "Description": "Premiada cuatro veces por ownership, responsabilidad y entrega constante de resultados de alta calidad."
+      }
+    }
+  },
+  "Projects": {
+    "Title": "Mis Proyectos"
+  },
+  "ContactMe": {
+    "Title": "Déjame un mensaje",
+    "Description": "Si estás interesado en mi perfil o tienes alguna pregunta, ¡no dudes en contactarme!",
+    "Submit": "Enviar mensaje",
+    "Errors": {
+      "Name": "Escribe tu nombre",
+      "Email": "Escribe un correo válido",
+      "Message": "Escribe un mensaje",
+      "Unknown": "Algo salió mal, inténtalo de nuevo más tarde"
+    },
+    "Success": "Mensaje enviado con éxito",
+    "Sending": "Enviando...",
+    "FormPlaceholder": {
+      "Name": "Ej. Juan",
+      "Email": "mail@example.com",
+      "Message": "Ej. Me gustaría ponernos en contacto para hablar sobre..."
+    }
+  }
 }

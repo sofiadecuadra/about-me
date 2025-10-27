@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.text-box {
+.textBox {
   height: 48px;
   width: calc(100% - 20px);
   border: 1px solid;
@@ -18,11 +18,11 @@
   line-height: 22px;
 }
 
-.text-box::placeholder {
+.textBox::placeholder {
   color: var(--color-light-grey);
 }
 
-.text-box:focus {
+.textBox:focus {
   outline: none;
   border-color: var(--color-primary);
   transition: all 0.3s ease;
@@ -36,7 +36,7 @@
   left: 10px;
 }
 
-.error-bubble {
+.errorBubble {
   position: absolute;
   top: -12px;
   right: 0;
@@ -46,5 +46,3 @@
   z-index: 1;
   font-size: small;
 }
-
-

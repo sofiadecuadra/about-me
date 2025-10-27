@@ -17,6 +17,47 @@
   --color-expensify-light: rgb(241, 151, 232);
   --color-expensify-background: #fef8fc;
 
+  /* LoopStudio */
+  --color-loopstudio: rgb(187, 51, 84);
+  --color-loopstudio-light: rgba(187, 51, 84, 0.7);
+  --color-loopstudio-background: #edf3fa;
+
+  /* Chart colors */
+  --chart-pie-color-1: rgba(255, 99, 132, 0.8);
+  --chart-pie-color-2: rgba(54, 162, 235, 0.8);
+  --chart-pie-color-3: rgba(255, 206, 86, 0.8);
+  --chart-pie-color-4: rgba(75, 192, 192, 0.8);
+  --chart-pie-color-5: rgba(153, 102, 255, 0.8);
+  --chart-pie-color-6: rgba(255, 159, 64, 0.8);
+  --chart-pie-color-7: rgba(201, 203, 207, 0.8);
+  --chart-pie-color-8: rgba(255, 99, 71, 0.8);
+
+  --chart-line-border-color: rgba(75, 192, 192, 1);
+  --chart-line-background-color: rgba(75, 192, 192, 0.2);
+
+  --chart-bar-color: aliceblue;
+
+  /* TravelMap colors */
+  --color-description: #e0e0e0;
+  --color-error: #ff5252;
+  --color-error-bg: rgba(255, 82, 82, 0.1);
+
+  /* CountryCard colors */
+  --color-country-card-hover-outline: #4a90e2;
+  --color-country-card-h3: #f8f8f8;
+  --color-country-info: #e0e0e0;
+  --color-tag-bg: rgba(80, 80, 80, 0.7);
+  --color-tag-text: #fff;
+  --color-tag-hover-bg: rgba(100, 100, 100, 0.9);
+  --color-tag-hover-outline: #fff;
+  --color-visit-date: #aaa;
+
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-primary: rgba(255, 84, 217, 0.4);
+
   font-family: "MADEOuterSans", sans-serif;
   line-height: 1.5;
 

@@ -1,90 +1,132 @@
 {
-    "Sections": {
-        "Home": "Home",
-        "AboutMe": "About me",
-        "Portfolio": "Portfolio",
-        "ContactMe": "Contact me"
+  "Sections": {
+    "Home": "Home",
+    "AboutMe": "About me",
+    "Portfolio": "Work Experience",
+    "TravelMap": "My Travels",
+    "ContactMe": "Contact me"
+  },
+  "SocialMedia": {
+    "LinkedIn": "LinkedIn",
+    "GitHub": "GitHub",
+    "Email": "Email"
+  },
+  "Home": {
+    "Name": "Sofía",
+    "Surname": "Decuadra",
+    "Greetings": "Hi there 👋 I’m",
+    "Career": "Software engineer 👩‍💻",
+    "Description": "Based in Uruguay 🇺🇾",
+    "ContactMe": "Contact me",
+    "OpenCV": "View Resume"
+  },
+  "AboutMe": {
+    "Title": "About me",
+    "Description": {
+      "First": " Software Engineer with full-stack experience, passionate about building thoughtful and reliable products.",
+      "Second": "I enjoy designing scalable architectures, writing clean, pixel-perfect code, and applying my cybersecurity knowledge to make applications more robust.",
+      "Third": "Enthusiastic and proactive, I love sharing knowledge while learning from others, and always strive to stay up to date with the latest technologies."
     },
-    "SocialMedia": {
-        "LinkedIn": "LinkedIn",
-        "GitHub": "GitHub",
-        "Email": "Email"
-    },
-    "Home": {
-        "Name": "Sofía",
-        "Surname": "Decuadra",
-        "Greetings": "Hi there 👋 I’m",
-        "Career": "Software engineer 👩‍💻",
-        "Description": "Based in Uruguay 🇺🇾",
-        "ContactMe": "Contact me",
-        "OpenCV": "View CV"
-    },
-    "AboutMe": {
-        "Title": "About me",
-        "Description": {
-            "First": "I'm a recent graduate in software engineering, actively seeking job opportunities. Recently, I've discovered a strong interest in front-end development, although I find both front-end and back-end roles enjoyable. ",
-            "Second": "I am skilled at quickly adapting to new technologies and roles, effective in independently managing projects, and enjoy collaborating within teams.",
-            "Third": "In regards to my experience in the software industry, I completed a year-long software development internship at 'CleanUp', where I contributed to the creation of an application for cleaning management. Further details can be found below."
-        },
-        "Languages": {
-            "Title": "Languages",
-            "English": "English: Advanced (Cambridge Certificate Level C1 - 2018)",
-            "Spanish": "Spanish: Native"
-        }
-    },
-    "CleanUp": {
-        "Title": "CleanUp",
-        "Description": "This project started as part of my final degree project. Within the project, I took on various roles, such as mobile developer (React native), web developer (React) and UX/UI designer.",
-        "Problem": {
-            "Title": "The problem",
-            "Description": "Managing cleaning operations in buildings poses several challenges. High turnover among cleaners requires constant training, diverse cleaning methods lead to inconsistent results, daily accidents compromise hygiene, and maintaining accurate records can be difficult."
-        },
-        "Solution": {
-            "Title": "The solution",
-            "Description": "The solution was to create a web application for building managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
-        },
-        "Procedures": {
-            "Title": "Procedures",
-            "Description": "Managers can configure how spaces should be cleaned. The QR codes (placed in the building) can then be scanned by the cleaners to read the cleaning procedure for the space they are going to clean."
-        },
-        "Alerts": {
-            "Title": "Alerts",
-            "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the QR code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
-        },
-        "Calendar": {
-            "Title": "Calendar",
-            "Description": "Managers can create a schedule of tasks and assign them to cleaners. Cleaners can access their assigned tasks for the day and mark them as completed, thus maintaining a record of the cleaned areas."
-        },
-        "WatchDemo": "Watch demo"
-    },
-    "Expensify": {
-        "Title": "Expensify",
-        "Description": "Web and mobile application for expense management in a family created as an academic project .",
-        "Categories": {
-            "Title": "Categories",
-            "Description": "Categories can be created to differentiate expenses according to them. This division is then used to extract metrics."
-        },
-        "Expenses": {
-            "Title": "Expenses",
-            "Description": "Expenses can be recorded and shared with family members. These include a name, date, category, and a photo of the invoice if desired."
-        }
-    },
-    "ContactMe": {
-        "Title": "Get in touch",
-        "Description": "If you are interested in my profile or have any questions, please do not hesitate to contact me!",
-        "Submit": "Send message",
-        "Errors": {
-            "Name": "Enter your name",
-            "Email": "Enter a valid email",
-            "Message": "Enter a message",
-            "Unknown": "Something went wrong, please try again later"
-        },
-        "Success": "Message sent successfully!",
-        "Sending": "Sending message...",
-        "FormPlaceholder": {
-            "Name": "E.g. Harry",
-            "Email": "mail@example.com",
-            "Message": "E.g. I would like to get in touch with you to talk about..."
-        }
+    "Languages": {
+      "Title": "Languages",
+      "English": "English: Advanced (Cambridge Certificate Level C1 - 2018)",
+      "Spanish": "Spanish: Native"
     }
+  },
+  "CleanUp": {
+    "Title": "CleanUp",
+    "Description": "Contributed to the development of a building cleaning management application, focusing on mobile and web development using React Native and React.",
+    "WorkExperience": {
+      "Title": "Frontend Developer",
+      "Period": "April 2023 – April 2024 (Internship)",
+      "Achievements": {
+        "Title": "Key Achievements",
+        "First": "Participated in the full development lifecycle, from ideation to deployment, in a fast-paced environment, enhancing team coordination and workflow.",
+        "Second": "Collaborated directly with stakeholders to define requirements and deliver a product tailored to user needs.",
+        "Third": "Designed and implemented calendars, charts, and dashboards with excellent performance and responsive design."
+      }
+    },
+    "Problem": {
+      "Title": "The problem",
+      "Description": "Managing cleaning operations in buildings poses several challenges. High turnover among cleaners requires constant training, diverse cleaning methods lead to inconsistent results, daily accidents compromise hygiene, and maintaining accurate records can be difficult."
+    },
+    "Solution": {
+      "Title": "The solution",
+      "Description": "The solution was to create a web application for building managers and a mobile application for cleaners. Everything revolves around QR codes that are placed in each space of a building and that are unique to each of them."
+    },
+    "Procedures": {
+      "Title": "Procedures",
+      "Description": "Managers can configure how spaces should be cleaned. The QR codes (placed in the building) can then be scanned by the cleaners to read the cleaning procedure for the space they are going to clean."
+    },
+    "Alerts": {
+      "Title": "Alerts",
+      "Description": "If an accident occurs, such as spilling coffee or running out of toilet paper, anyone can scan the QR code located in the space where it occurred and report it. A notification will be sent to the building manager to assign a cleaner, who will receive a notification and can resolve it as soon as possible."
+    },
+    "Calendar": {
+      "Title": "Calendar",
+      "Description": "Managers can create a schedule of tasks and assign them to cleaners. Cleaners can access their assigned tasks for the day and mark them as completed, thus maintaining a record of the cleaned areas."
+    },
+    "WatchDemo": "Watch demo",
+    "WebsiteButton": "Visit website"
+  },
+  "Expensify": {
+    "Title": "Expensify",
+    "Description": "Web and mobile application for expense management in a family created as an academic project .",
+    "Categories": {
+      "Title": "Categories",
+      "Description": "Categories can be created to differentiate expenses according to them. This division is then used to extract metrics."
+    },
+    "Expenses": {
+      "Title": "Expenses",
+      "Description": "Expenses can be recorded and shared with family members. These include a name, date, category, and a photo of the invoice if desired."
+    }
+  },
+  "LoopStudio": {
+    "Title": "LoopStudio",
+    "WorkExperience": {
+      "Title": "Full-Stack Engineer",
+      "Period": "October 2024 – Present",
+      "Description": "Working at LoopStudio, a company with a strong focus on cybersecurity, collaborating with U.S. clients and primarily using Node.js, React, and Python."
+    },
+    "Achievements": {
+      "Title": "Key Achievements",
+      "Payroll": {
+        "Title": "Payroll Application",
+        "Description": "Developed a payroll application using Node.js and React to calculate employee pay according to U.S. labor regulations, ensuring accurate and compliant payments."
+      },
+      "DaysOff": {
+        "Title": "Days-Off Management Tool",
+        "Description": "Built a management tool for employee days off within the company, featuring a web interface (React, Next.js), a Slack extension (Slack Bolt), and a backend powered by Node.js with NestJS, including approvals, notifications, and contract-based calculations."
+      },
+      "Cybersecurity": {
+        "Title": "Cybersecurity Training",
+        "Description": "Participated in cybersecurity training to strengthen awareness and secure software development practices."
+      },
+      "Awards": {
+        "Title": "Internal Recognition",
+        "Description": "Awarded four times for ownership, responsibility, and consistent delivery of high-quality results."
+      }
+    }
+  },
+  "Projects": {
+    "Title": "My Projects"
+  },
+  "ContactMe": {
+    "Title": "Get in touch",
+    "Description": "If you are interested in my profile or have any questions, please do not hesitate to contact me!",
+    "Submit": "Send message",
+    "Errors": {
+      "Name": "Enter your name",
+      "Email": "Enter a valid email",
+      "Message": "Enter a message",
+      "Unknown": "Something went wrong, please try again later"
+    },
+    "Success": "Message sent successfully!",
+    "Sending": "Sending message...",
+    "FormPlaceholder": {
+      "Name": "E.g. Harry",
+      "Email": "mail@example.com",
+      "Message": "E.g. I would like to get in touch with you to talk about..."
+    }
+  }
 }

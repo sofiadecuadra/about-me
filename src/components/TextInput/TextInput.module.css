@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 6px;
+  outline: none;
+  font-family: "Manrope", sans-serif;
+}
+
+.input:focus {
+  border-color: var(--primary-color, #4a6cf7);
+  box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+}

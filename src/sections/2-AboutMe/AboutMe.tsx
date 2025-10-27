@@ -1,39 +1,40 @@
 import { useEffect, useRef, forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import Carousel from "../../components/Carousel/Carousel";
-import { HEADER_HEIGHT, observeElement, useWindowDimensions } from "../../utils";
+
+import Carousel from "@components/Carousel/Carousel";
+import { HEADER_HEIGHT } from "@/utils";
+import { useWindowSize } from "@/hooks/useWindowSize";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import meImg from "@images/me.png";
+
 import style from "./AboutMe.module.css";
-import meImg from "../../assets/images/me.png"
 
 const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
-  const { width, height } = useWindowDimensions();
+  const { height, isMobile } = useWindowSize();
+  const { observeElement } = useIntersectionObserver();
 
-  const containerStyle =
-    width > 768 ? { height: height - HEADER_HEIGHT } : undefined;
+  const containerStyle = !isMobile
+    ? { height: height - HEADER_HEIGHT }
+    : undefined;
 
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const unobserve = observeElement(imgRef, style["visible"]);
+    const unobserve = observeElement(imgRef, style.visible);
     return () => unobserve();
-  }, []);
+  }, [observeElement]);
 
   const handleCVClick = () => {
-    window.open("https://drive.google.com/file/d/1s5L3BgKtMXnsKDw_ITIw0B5WisQnjf1m/view?usp=sharing", "_blank");
+    window.open(import.meta.env.VITE_REACT_APP_CV_LINK || "", "_blank");
   };
 
   return (
-    <div className={style["container"]} style={containerStyle} ref={ref}>
-      <img
-        src={meImg}
-        className={style["image"]}
-        alt="Me"
-        ref={imgRef}
-      />
-      <div className={style["subContainer"]}>
+    <div className={style.container} style={containerStyle} ref={ref}>
+      <img src={meImg} className={style.image} alt="Me" ref={imgRef} />
+      <div className={style.subContainer}>
         <h2>{t("AboutMe.Title")}</h2>
-        <p className={style["text"]}>
+        <p className={style.text}>
           {t("AboutMe.Description.First")}
           <br />
           <br />
@@ -43,7 +44,9 @@ const AboutMe = forwardRef<HTMLDivElement>((_, ref) => {
           {t("AboutMe.Description.Third")}
         </p>
         <Carousel />
-        <button onClick={handleCVClick} className={style["button"]}>{t("Home.OpenCV")}</button>
+        <button onClick={handleCVClick} className={style.button}>
+          {t("Home.OpenCV")}
+        </button>
       </div>
     </div>
   );

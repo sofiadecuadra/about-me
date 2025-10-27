@@ -1,14 +1,19 @@
 import { forwardRef, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { HEADER_HEIGHT, useWindowDimensions } from "../../utils";
-import style from "./ContactMe.module.css";
-import TextBox from "../../components/TextBox/TextBox";
-import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { z } from "zod";
+
+import { HEADER_HEIGHT } from "@/utils";
+import { useWindowSize } from "@/hooks/useWindowSize";
+import { contactFormSchema, type ContactFormData } from "../../schemas";
+import emailjs from "@emailjs/browser";
+import TextBox from "@components/TextBox/TextBox";
+
+import style from "./ContactMe.module.css";
 
 const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
-  const { height } = useWindowDimensions();
+  const { height } = useWindowSize();
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
   const [email, setEmail] = useState("");
@@ -20,34 +25,44 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  const validateForm = () => {
-    let isValid = true;
+  const validateForm = (): boolean => {
+    try {
+      const formData: ContactFormData = {
+        from_name: name.trim(),
+        from_email: email.trim(),
+        message: message.trim(),
+      };
 
-    if (!message.trim()) {
-      setMessageError(t("ContactMe.Errors.Message"));
-      isValid = false;
-      messageRef.current?.focus();
-    } else {
-      setMessageError("");
-    }
+      contactFormSchema.parse(formData);
 
-    if (!email.trim() || !/^\S+@\S+\.\S+$/.test(email)) {
-      setEmailError(t("ContactMe.Errors.Email"));
-      isValid = false;
-      emailRef.current?.focus();
-    } else {
-      setEmailError("");
-    }
-
-    if (!name.trim()) {
-      setNameError(t("ContactMe.Errors.Name"));
-      isValid = false;
-      nameRef.current?.focus();
-    } else {
       setNameError("");
-    }
+      setEmailError("");
+      setMessageError("");
 
-    return isValid;
+      return true;
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        setNameError("");
+        setEmailError("");
+        setMessageError("");
+        error.issues.forEach((err) => {
+          const fieldName = err.path[0] as string;
+          const errorMessage = t(err.message);
+
+          if (fieldName === "from_name") {
+            setNameError(errorMessage);
+            nameRef.current?.focus();
+          } else if (fieldName === "from_email") {
+            setEmailError(errorMessage);
+            emailRef.current?.focus();
+          } else if (fieldName === "message") {
+            setMessageError(errorMessage);
+            messageRef.current?.focus();
+          }
+        });
+      }
+      return false;
+    }
   };
 
   const sendEmail = () => {
@@ -56,6 +71,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
     const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
+      toast.error(t("ContactMe.Errors.Unknown"));
       console.error("Service ID, template ID, or public key is undefined.");
       return;
     }
@@ -88,6 +104,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
         }
       );
     } else {
+      toast.error(t("ContactMe.Errors.Unknown"));
       console.error("Form is not a HTMLFormElement or it's null");
     }
   };
@@ -101,42 +118,42 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
 
   return (
     <div
-      className={style["container"]}
+      className={style.container}
       ref={ref}
-      style={{ height: height - HEADER_HEIGHT}}
+      style={{ height: height - HEADER_HEIGHT }}
     >
-      <div className={style["subContainer"]}>
+      <div className={style.subContainer}>
         <h2>{t("ContactMe.Title")}</h2>
-        <p className={style["text"]}>{t("ContactMe.Description")}</p>
+        <p className={style.text}>{t("ContactMe.Description")}</p>
         <form
-          className={style["form-container"]}
+          className={style.formContainer}
           id="contact-form"
           onSubmit={handleFormSubmit}
-        > 
-          <div className={style["user-info"]}>
-            <div className={style["width"]}>
-            <TextBox
-              label="Name"
-              name="from_name"
-              placeholder={t("ContactMe.FormPlaceholder.Name")}
-              required
-              setField={setName}
-              error={nameError}
-              setError={setNameError}
-              inputRef={nameRef}
-            />
+        >
+          <div className={style.userInfo}>
+            <div className={style.width}>
+              <TextBox
+                label="Name"
+                name="from_name"
+                placeholder={t("ContactMe.FormPlaceholder.Name")}
+                required
+                setField={setName}
+                error={nameError}
+                setError={setNameError}
+                inputRef={nameRef}
+              />
             </div>
-            <div className={style["width"]}>
-            <TextBox
-              label="Email"
-              name="from_email"
-              placeholder={t("ContactMe.FormPlaceholder.Email")}
-              required
-              setField={setEmail}
-              error={emailError}
-              setError={setEmailError}
-              inputRef={emailRef}
-            />
+            <div className={style.width}>
+              <TextBox
+                label="Email"
+                name="from_email"
+                placeholder={t("ContactMe.FormPlaceholder.Email")}
+                required
+                setField={setEmail}
+                error={emailError}
+                setError={setEmailError}
+                inputRef={emailRef}
+              />
             </div>
           </div>
           <TextBox
@@ -151,7 +168,7 @@ const ContactMe = forwardRef<HTMLDivElement>((_, ref) => {
             setError={setMessageError}
             inputRef={messageRef}
           />
-          <button type="submit" className={style["button"]}>
+          <button type="submit" className={style.button}>
             {t("ContactMe.Submit")}
           </button>
         </form>

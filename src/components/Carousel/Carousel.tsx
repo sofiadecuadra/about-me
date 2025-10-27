@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   CSSLogo,
   CSharpLogo,
@@ -7,12 +8,13 @@ import {
   NodeLogo,
   ReactLogo,
   TypescriptLogo,
-} from "../../assets/logos";
+} from "@assets/logos";
+
 import styles from "./Carousel.module.css";
 
 const Carousel = () => {
   const numRepetitions = 4;
-  
+
   const logoSets = [...Array(numRepetitions)];
 
   return (

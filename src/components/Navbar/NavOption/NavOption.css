@@ -1,73 +1,94 @@
 .nav-option,
 .nav-option:hover,
 .nav-option:active {
-    background-color: transparent;
-    border-width: 0px;
-    border-color: transparent;
-    padding: 12px 32px;
-    line-height: 24px;
-    transition: all 0.3s ease;
+  background-color: transparent;
+  border-width: 0px;
+  border-color: transparent;
+  padding: 12px 32px;
+  line-height: 24px;
+  transition: all 0.3s ease;
 }
 
 /* Default */
 .nav-option-default:hover {
-    color: var(--color-primary-light);
+  color: var(--color-primary-light);
 }
 
 .nav-option-default:active {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .nav-option-default {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .nav-option-default-selected:hover {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .nav-option-default-selected {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* CleanUp */
 .nav-option-cleanup:hover {
-    color: var(--color-cleanup-light);
+  color: var(--color-cleanup-light);
 }
 
 .nav-option-cleanup:active {
-    color: var(--color-cleanup);
+  color: var(--color-cleanup);
 }
 
 .nav-option-cleanup {
-    color: var(--color-grey);
+  color: var(--color-grey);
 }
 
 .nav-option-cleanup-selected:hover {
-    color: var(--color-cleanup);
+  color: var(--color-cleanup);
 }
 
 .nav-option-cleanup-selected {
-    color: var(--color-cleanup);
+  color: var(--color-cleanup);
 }
 
 /* Expensify */
 .nav-option-expensify:hover {
-    color: var(--color-expensify-light);
+  color: var(--color-expensify-light);
 }
 
 .nav-option-expensify:active {
-    color: var(--color-expensify);
+  color: var(--color-expensify);
 }
 
 .nav-option-expensify {
-    color: var(--color-grey);
+  color: var(--color-grey);
 }
 
 .nav-option-expensify-selected:hover {
-    color: var(--color-expensify);
+  color: var(--color-expensify);
 }
 
 .nav-option-expensify-selected {
-    color: var(--color-expensify);
+  color: var(--color-expensify);
+}
+
+/* LoopStudio */
+.nav-option-loopstudio:hover {
+  color: var(--color-loopstudio-light);
+}
+
+.nav-option-loopstudio:active {
+  color: var(--color-loopstudio);
+}
+
+.nav-option-loopstudio {
+  color: var(--color-grey);
+}
+
+.nav-option-loopstudio-selected:hover {
+  color: var(--color-loopstudio);
+}
+
+.nav-option-loopstudio-selected {
+  color: var(--color-loopstudio);
 }

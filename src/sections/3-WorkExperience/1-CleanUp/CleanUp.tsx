@@ -1,33 +1,34 @@
 import { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import style from "./CleanUp.module.css";
-import Card from "../../../components/Card/Card";
-import cleanupImg from "../../../assets/images/cleanup/cleanup.png";
-import alertsImg from "../../../assets/images/cleanup/alerts.png"; 
-import calendarImg from "../../../assets/images/cleanup/calendar.png"; 
-import proceduresImg from "../../../assets/images/cleanup/procedures.png"; 
 
+import Card from "@components/Card/Card";
+import cleanupImg from "@images/cleanup/cleanup.png";
+import alertsImg from "@images/cleanup/alerts.png";
+import calendarImg from "@images/cleanup/calendar.png";
+import proceduresImg from "@images/cleanup/procedures.png";
+
+import style from "./CleanUp.module.css";
 
 const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
   const { t } = useTranslation();
 
   const handleCleanUpDemoClick = () => {
-    window.open("https://www.youtube.com/watch?v=yFOnTAac8FI", "_blank");
+    window.open("https://www.cleanupweb.com/index", "_blank");
   };
 
   return (
     <div className={style.background} ref={ref}>
-      <div className={style.container} >
-        <div className={style["title-container"]}>
+      <div className={style.container}>
+        <div className={style.titleContainer}>
           <h2 className={style.text}>{t("CleanUp.Title")}</h2>
+          <h3 className={style.workExperienceTitle}>
+            {t("CleanUp.WorkExperience.Title")}
+          </h3>
+          <p>{t("CleanUp.WorkExperience.Period")}</p>
           <p className={style.text}>{t("CleanUp.Description")}</p>
         </div>
-        <div className={style["problem-container"]}>
-        <img
-            src={cleanupImg}
-            className={style.image}
-            alt="Img"
-          />
+        <div className={style.problemContainer}>
+          <img src={cleanupImg} className={style.image} alt="Img" />
           <div>
             <Card
               title={t("CleanUp.Problem.Title")}
@@ -63,8 +64,23 @@ const CleanUp = forwardRef<HTMLDivElement>((_, ref) => {
           imagePosition="right"
         />
         <button onClick={handleCleanUpDemoClick} className={style.button}>
-          {t("CleanUp.WatchDemo")}
+          {t("CleanUp.WebsiteButton")}
         </button>
+
+        <div className={style.achievementsContainer}>
+          <span className={style.workExperiencePeriod}>
+            {t("CleanUp.WorkExperience.Achievements.Title")}
+          </span>
+          <p className={style.achievementText}>
+            {t("CleanUp.WorkExperience.Achievements.First")}
+          </p>
+          <p className={style.achievementText}>
+            {t("CleanUp.WorkExperience.Achievements.Second")}
+          </p>
+          <p className={style.achievementText}>
+            {t("CleanUp.WorkExperience.Achievements.Third")}
+          </p>
+        </div>
       </div>
     </div>
   );

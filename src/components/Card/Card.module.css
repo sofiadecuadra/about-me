@@ -47,6 +47,10 @@
   color: var(--color-expensify);
 }
 
+.text-loopstudio {
+  color: var(--color-loopstudio);
+}
+
 .image {
   max-width: 80%;
   max-height: auto;
