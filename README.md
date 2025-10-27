@@ -1,7 +1,7 @@
 # About me
 
 This project is built using React, TypeScript, and Vite.
-You can visit the live version here: [https://sofiadecuadra.github.io/](https://sofiadecuadra.github.io/)
+You can visit the live version here: [https://sofiadecuadra.github.io/](https://sofiadecuadra.github.io/about-me/)
 
 ## Installation
 
