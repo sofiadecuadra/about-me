@@ -1,4 +1,4 @@
-export type NavOptionVariant = "default" | "cleanup" | "expensify";
+export type NavOptionVariant = "default" | "cleanup" | "expensify" | "loopstudio";
 
 export type NavOptionProps = {
   text: string;
